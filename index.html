@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="CSS Stuffs">
+  <title>Elements</title>
+
+  <link rel="stylesheet" href="./dist/styles.min.css">
+</head>
+
+<body style="--body-space: 2.5rem;">
+
+  <header>
+    <h1>Elements</h1>
+
+    <p data-cluster="gap:1" style="margin-block-start: 2rem;">
+      <a href="/">Elements</a>
+      <a href="/layouts.html">Layouts</a>
+    </p>
+  </header>
+
+  <p>This css takes advantage of semantic HTML elements. Here are some guidelines on how these should be used for the
+    best results.</p>
+
+
+
+  <h2>Body</h2>
+
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, sed beatae tempore est minima repellendus consectetur
+    quaerat inventore quas asperiores veniam doloribus explicabo natus cum nesciunt perspiciatis deleniti odit?
+    Repellat?
+  </p>
+
+
+  <h2>Buttons</h2>
+
+  <p>For a link button, wrap the button in an <code>&lt;a&gt;</code> tag. For example-</p>
+
+  <pre>
+&lt;a href=&quot;https://example.com&quot;&gt;
+&lt;button&gt;Click me!&lt;/button&gt;
+&lt;/a&gt;</pre>
+
+
+  <h2>Code</h2>
+
+  <p>Use <code>&lt;code&gt;</code> for short inline code.</p>
+
+  <p>Use <code>&lt;pre&gt;</code> for code blocks.</p>
+
+  <blockquote>These two shouldn't be nested, but if they are, the child element will clear it's own style and match the
+    parent.</blockquote>
+
+  <p>Use <code>&lt;kbd&gt;</code> for keyboard input. For example, <kbd>ALT + F4</kbd></p>
+
+
+  <h2>Details</h2>
+
+  <p>The <code>&lt;details&gt;</code> element can make a toggle-able dropdown without any JavaScript. Here's an example-
+  </p>
+
+  <details>
+    <summary>Click me!</summary>
+    <p>Lorem ipsum dolor sit amet.</p>
+  </details>
+
+  <p>Here's the code-</p>
+
+  <pre>
+&lt;details&gt;
+&lt;summary&gt;Click me!&lt;/summary&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet.&lt;/p&gt;
+&lt;/details&gt;
+</pre>
+
+
+  <h2>Text</h2>
+
+  <p>Wrap all body text in <code>&lt;p&gt;</code> tags, unless it's the sole child of another element. Here are
+    examples-</p>
+
+  <pre>
+&lt;blockquote&gt;
+Hello, world!
+&lt;/blockquote&gt;
+</pre>
+
+  <pre>
+&lt;blockquote&gt;
+&lt;p&gt;Hello, world!&lt;/p&gt;
+&lt;button&gt;Click me!&lt;/button&gt;
+&lt;/blockquote&gt;
+</pre>
+
+  <pre>
+&lt;ul&gt;
+&lt;li&gt;Hello, world!&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Line 1&lt;/p&gt;
+&lt;img src=&quot;https://example.com/image.png&quot;&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+</body>
+
+</html>

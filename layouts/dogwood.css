@@ -1,0 +1,57 @@
+nav {
+  border-block-end: 1px solid #ddd;
+  position: sticky;
+  top: 0;
+
+  section {
+    padding-inline-end: 2rem;
+    line-height: 4;
+    > * + * {
+      margin-inline: 1rem;
+      padding-inline: 1rem;
+    }
+    > * {
+      border-inline-end: 1px solid #ddd;
+    }
+  }
+
+  ul { list-style-type: none; padding-inline-end: 2rem; }
+}
+.logo { padding: 1rem; }
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: #000;
+  opacity: .5;
+}
+
+.site-header {
+  color: var(--color-text-white);
+  isolation: isolate;
+  background-image: url('https://static.wixstatic.com/media/1f7967_d928a2f9be0745ce8a04a789dea082e1~mv2.jpg/v1/fill/w_1861,h_1667,al_c,q_90,enc_avif,quality_auto/1f7967_d928a2f9be0745ce8a04a789dea082e1~mv2.jpg');
+  text-transform: uppercase;
+
+  > * + * { z-index: 10; }
+
+  h1 {
+    font-weight: 100;
+    font-size: 3.5rem;
+    color: var(--color-text-white);
+  }
+  h2 {
+    font-weight: 100;
+    font-size: 1.5rem;
+    color: var(--color-text-white);
+  }
+}
+
+.values {
+  padding: 5rem;
+  padding-block: 25vh;
+}
+h3 { font-size: 3rem; font-weight: 200;}
+sl-details::part(base)  {
+  border: none;
+  border-block-end: 1px solid #ddd;
+  border-radius: 0;;
+}

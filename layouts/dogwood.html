@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="CSS Stuffs">
+  <title>Layouts</title>
+
+  <link rel="stylesheet" href="./dogwood.css">
+  <link rel="stylesheet" href="/dist/styles.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.19.0/cdn/themes/light.css" />
+
+
+  <script type="module" src="/scripts/index.js"></script>
+  <script type="module"
+    src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.19.0/cdn/components/details/details.js"></script>
+</head>
+
+<body>
+  <header class="site-header" data-cover="block-size:100">
+    <div class="overlay"></div>
+    <nav class="site-nav fixed" data-cluster="gap:1 align:center justify:between">
+      <span class="logo"><a href="/">DH</a></span>
+
+      <section data-cluster="align:center">
+        <ul data-cluster="gap:2">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+
+        <p><a tel="123-456-7890">123-456-7890</a></p>
+
+        <button>Get a quote</button>
+      </section>
+    </nav>
+
+    <section data-cover-main data-center="center:text" data-stack="gap:1">
+      <h1>Dogwood Homes</h1>
+      <h2>Contracting &amp; Design Studio</h2>
+      <p>Little Rock, AR</p>
+    </section>
+
+  </header>
+
+  <section class="values" data-split="gap:2">
+
+    <div data-stack="gap:2">
+      <h3>Our Values</h3>
+      <div class="details-group-example">
+        <sl-details summary="First" open>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+          dolore magna
+          aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat.
+        </sl-details>
+
+        <sl-details summary="Second">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+          dolore magna
+          aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat.
+        </sl-details>
+
+        <sl-details summary="Third">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+          dolore magna
+          aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat.
+        </sl-details>
+      </div>
+
+      <script>
+        const container = document.querySelector('.details-group-example');
+
+        // Close all other details when one is shown
+        container.addEventListener('sl-show', event => {
+          if (event.target.localName === 'sl-details') {
+            [...container.querySelectorAll('sl-details')].map(details => (details.open = event.target === details));
+          }
+        });
+      </script>
+
+      <style>
+        .details-group-example sl-details:not(:last-of-type) {
+          margin-bottom: var(--sl-spacing-2x-small);
+        }
+      </style>
+
+
+    </div>
+
+    <div>
+      <img
+        src="https://static.wixstatic.com/media/1f7967_d928a2f9be0745ce8a04a789dea082e1~mv2.jpg/v1/fill/w_1861,h_1667,al_c,q_90,enc_avif,quality_auto/1f7967_d928a2f9be0745ce8a04a789dea082e1~mv2.jpg"
+        alt="">
+    </div>
+
+  </section>
+
+
+</body>
+
+</html>

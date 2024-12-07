@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="CSS Stuffs">
+  <title>Layouts</title>
+
+  <link rel="stylesheet" href="/dist/styles.min.css">
+  <style>
+    p {
+      margin-block-end: 1.25rem;
+    }
+
+    section {
+      margin-block-start: 3rem;
+    }
+
+    span {
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Layouts - Container</h1>
+  </header>
+
+  <section>
+    <div data-container="width:1040" style="background-color: lightblue; padding: 2rem;">
+      <p>
+        Three widths are available:
+        <br>
+        <span>1040px</span>
+        <br>
+        <span>1200px</span>
+        <br>
+        <span>1350px</span>
+      </p>
+
+      <pre>
+&lt;div data-container="width:1040"&gt;
+  &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, quod.&lt;/p&gt;
+&lt;/div&gt;
+</pre>
+    </div>
+
+  </section>
+
+
+  <section>
+    <div data-container="padding:1" style="background-color: lightblue; padding: 2rem; --container-size: 76.6875rem;">
+      <p>Custom widths can be declared by overriding the <code>--container-size</code> property of the
+        <code>[data-container]</code> element.
+      </p>
+
+      <pre>
+        &lt;div data-container style="--container-size: 76.6875rem"&gt;
+          &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, quod.&lt;/p&gt;
+        &lt;/div&gt;
+        </pre>
+
+
+  </section>
+
+
+
+</body>
+
+</html>

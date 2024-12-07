@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="CSS Stuffs">
+  <title>Layouts</title>
+
+  <link rel="stylesheet" href="/dist/styles.min.css">
+  <style>
+    p {
+      margin-block-end: 1.25rem;
+    }
+
+    section {
+      margin-block-start: 3rem;
+    }
+
+    input,
+    textarea {
+      padding: .5rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Layouts - Stack</h1>
+  </header>
+
+
+  <section data-container="width:1040">
+    <form data-stack="gap:2">
+      <label for="name" data-stack="gap:1">
+        Name
+        <input type="text" id="name" name="name">
+      </label>
+
+      <label for="email" data-stack="gap:1">
+        Email
+        <input type="email" id="email" name="email">
+      </label>
+
+      <label for="message" data-stack="gap:1">
+        Message
+        <textarea id="message" name="message"></textarea>
+      </label>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <br><br>
+
+    <pre>
+&#x3C;form data-stack=&#x22;gap:2&#x22;&#x3E;
+  &#x3C;label for=&#x22;name&#x22; data-stack=&#x22;gap:1&#x22;&#x3E;
+    Name
+    &#x3C;input type=&#x22;text&#x22; id=&#x22;name&#x22; name=&#x22;name&#x22;&#x3E;
+  &#x3C;/label&#x3E;
+
+  &#x3C;label for=&#x22;email&#x22; data-stack=&#x22;gap:1&#x22;&#x3E;
+    Email
+    &#x3C;input type=&#x22;email&#x22; id=&#x22;email&#x22; name=&#x22;email&#x22;&#x3E;
+  &#x3C;/label&#x3E;
+
+  &#x3C;label for=&#x22;message&#x22; data-stack=&#x22;gap:1&#x22;&#x3E;
+    Message
+    &#x3C;textarea id=&#x22;message&#x22; name=&#x22;message&#x22;&#x3E;&#x3C;/textarea&#x3E;
+  &#x3C;/label&#x3E;
+
+  &#x3C;button type=&#x22;submit&#x22;&#x3E;Submit&#x3C;/button&#x3E;
+&#x3C;/form&#x3E;
+    </pre>
+
+</body>
+
+</html>

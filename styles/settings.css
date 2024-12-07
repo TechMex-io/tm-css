@@ -1,0 +1,61 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --serif: 'IBM Plex Serif', serif;
+  --sans: 'Figtree Variable', sans-serif;
+
+  color-scheme: light dark;
+  --color-opacity: 1;
+  --dark: rgb(31 31 31 / var(--color-opacity));
+  --light: rgb(234 234 234 / var(--color-opacity));
+  --measure: 65ch;
+
+	--font--serif: 'IBM Plex Serif', serif;
+	--font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	--font-mono: Consolas, monaco, 'Ubuntu Mono', 'Liberation Mono', 'Courier New', Courier, monospace;
+
+  /* Spacing */
+  --body-space: 1rem;
+
+  /* Light theme */
+  --color-text-primary: hsl(220 25% 20% / 1); /* Soft dark blue-gray */
+  --color-text-secondary: hsl(220 15% 35% / 1); /* Lighter blue-gray */
+  --color-text-white: hsl(0 0% 100% / 1); /* Pure white for contrast when needed */
+  --color-bg-primary: hsl(210 0% 100% / 1); /* Very soft blue-white */
+  --color-bg-secondary: hsl(214 32% 96% / 1); /* Slightly darker soft blue-white */
+  --color-bg-muted: hsl(220 16% 92% / 1); /* Muted light blue-gray */
+  --color-link-primary: hsl(212 75% 40% / 1); /* Rich accessible blue */
+  --color-link-secondary: hsl(212 65% 45% / 1); /* Slightly lighter blue */
+  --color-accent: hsl(185 70% 42% / 1); /* Vibrant teal */
+  --color-accent-text: hsl(220 25% 20% / 1); /* Matching primary text */
+
+  /* Dark theme */
+  --color-text-primary-dark: hsl(220 15% 90% / 1); /* Light gray with blue undertone */
+  --color-text-secondary-dark: hsl(220 10% 80% / 1); /* Slightly darker gray */
+  --color-bg-primary-dark: hsl(222 47% 11% / 1); /* Deep blue-gray */
+  --color-bg-secondary-dark: hsl(222 45% 14% / 1); /* Slightly lighter deep blue-gray */
+  --color-bg-muted-dark: hsl(222 43% 18% / 1); /* Muted deep blue-gray */
+  --color-link-primary-dark: hsl(210 85% 60% / 1); /* Bright blue for dark theme */
+  --color-link-secondary-dark: hsl(210 75% 55% / 1); /* Slightly muted blue */
+  --color-link-text-dark: hsl(220 15% 90% / 1); /* Matching primary text */
+  --color-accent-text-dark: hsl(185 70% 42% / 1); /* Same teal as light theme */
+
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--color-text-primary: var(--color-text-primary-dark);
+		--color-text-secondary: var(--color-text-secondary-dark);
+		--color-bg-primary: var(--color-bg-primary-dark);
+		--color-bg-secondary: var(--color-bg-secondary-dark);
+		--color-bg-muted: var(--color-bg-muted-dark);
+		--color-link-primary: var(--color-link-primary-dark);
+		--color-link-secondary: var(--color-link-secondary-dark);
+		--color-accent: var(--color-accent);
+		--color-accent-text: var(--color-accent-text-dark);
+	}
+}
