@@ -8,6 +8,23 @@ A simple CSS framework for Tech-Mex projects
 - [Shoelace](https://github.com/shoelace-style/shoelace) is added as a dev dependency but needs to be included in your project. See the [Shoelace documentation](https://shoelace.style/) for more information.
 
 ## About
+
+### Install
+
+In your Processwire site, 
+
+- `cd` into `/site/templates` 
+- `rm -rf styles scripts`
+- `git clone git@github.com:TechMex-io/tm-css.git `
+- `mv tm-css/styles ./`
+- `mv tm-css/scripts ./`
+- `mv tm-css/package.json ./`
+- `pnpm i`
+- `rm -rf tm-css/`
+- update your template files with the paths to `dist/styles.min.js` and `dist/bundle.min.js` 
+
+### CSS
+
 `index.css` is the entry point for your css.
 `@layers` are set up in the followng order:
 ```
@@ -31,6 +48,10 @@ this is where you set up your custom css properties. there are some properties a
 `app.css` is where you add any custom styling for your site.
 
 `utils.css` is where you add any utility classes for your site. these are the highest specificity and should be used sparingly. a few utility classes are included but this is for you to update as needed.
+
+
+### JS
+
 
 ## Todo
 - [ ]  Finish basic documentation

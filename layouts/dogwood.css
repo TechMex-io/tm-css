@@ -3,6 +3,11 @@ nav {
   position: sticky;
   top: 0;
 
+  a {
+    text-decoration: none;
+    color: var(--color-text-white);
+  }
+
   section {
     padding-inline-end: 2rem;
     line-height: 4;

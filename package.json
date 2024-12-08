@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-    "scripts": {
+  "scripts": {
     "build:css": "esbuild --bundle ./styles/index.css --loader:.ttf=file --outfile=./dist/styles.min.css --minify --sourcemap",
     "watch:css": "esbuild --bundle ./styles/index.css --loader:.ttf=file --outfile=./dist/styles.min.css --watch",
     "build:js": "esbuild ./scripts/main.js --outfile=./dist/bundle.min.js --bundle --minify --sourcemap --tree-shaking=true",
@@ -12,9 +12,11 @@
     "watch": "npm-run-all -p watch:js watch:css"
   },
   "devDependencies": {
+    "@shoelace-style/shoelace": "^2.19.0",
     "autoprefixer": "^10.4.20",
     "esbuild": "^0.24.0",
     "npm-run-all": "^4.1.5",
+    "petite-vue": "^0.4.1",
     "postcss": "^8.4.49"
   },
   "keywords": [],
