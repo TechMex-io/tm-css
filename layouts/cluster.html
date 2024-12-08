@@ -29,8 +29,8 @@
     import { createSignal, createHandler } from '../scripts/vivo.js'
 
     const [text, setText] = createSignal('text', 'justify:center align:center gap:2')
-    const clusterEl = document.querySelector('[data-cluster]');
-    const spanEl = document.querySelector('span');
+    const clusterEl = document.querySelector('.demo');
+    const spanEl = document.querySelector('.clusterspan');
     createHandler('updateText', e => {
       setText(e.target.value.trim());
       clusterEl.setAttribute('data-cluster', text());
@@ -72,7 +72,7 @@
 
     <h3>Code:</h3>
     <pre>
-    &#x3C;div data-cluster=&#x22;<span>justify:center align:center gap:2</span>&#x22;&#x3E;
+    &#x3C;div data-cluster=&#x22;<span class="clusterspan">justify:center align:center gap:2</span>&#x22;&#x3E;
       &#x3C;p&#x3E;&#x3C;a href=&#x22;#&#x22;&#x3E;Home&#x3C;/a&#x3E;&#x3C;/p&#x3E;
       &#x3C;p&#x3E;&#x3C;a href=&#x22;#&#x22;&#x3E;About&#x3C;/a&#x3E;&#x3C;/p&#x3E;
       &#x3C;p&#x3E;&#x3C;a href=&#x22;#&#x22;&#x3E;Contact&#x3C;/a&#x3E;&#x3C;/p&#x3E;
