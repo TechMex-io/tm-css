@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="CSS Stuffs">
+  <title>Layouts</title>
+
+  <link rel="stylesheet" href="../dist/styles.min.css">
+  <style>
+    [data-cluster] {
+      min-block-size: 4rem;
+    }
+
+    section {
+      margin-block-start: 3rem;
+
+      >*+* {
+        margin-block-start: 2rem;
+      }
+    }
+  </style>
+  <script type="module">
+    import { createSignal, createHandler } from '../scripts/vivo.js'
+
+    const [text, setText] = createSignal('text', 'gap:1 collapse:lg')
+    const centerEl = document.querySelector('[data-center]');
+    const spanEl = document.querySelector('.centerspan');
+    createHandler('updateText', e => {
+      setText(e.target.value.trim());
+      centerEl.setAttribute('data-center', text());
+      spanEl.textContent = text();
+    })
+
+  </script>
+</head>
+
+<body data-container="width:1040">
+
+  <header>
+    <h1>Layouts - Center</h1>
+    <div data-cluster="gap:1" style="margin-block-start: 1rem;">
+      <p><a href="../index.html">Elements</a></p>
+      <p><a href="./container.html">Container</a></p>
+      <p><a href="./stack.html">Stack</a></p>
+      <p><a href="./cluster.html">Cluster</a></p>
+      <p><a href="./split.html">Split</a></p>
+      <p><a href="./switcher.html">Switcher</a></p>
+      <p><a href="./cover.html">Cover</a></p>
+      <p><a href="./center.html">Center</a></p>
+
+    </div>
+  </header>
+
+
+
+  <section>
+    <h3>Demo:</h3>
+    <div data-center="center:children center:text" data-stack="gap:1">
+      <h2>Quisimos aprender la despedida</h2>
+      <p>y rompimos la alianza</p>
+      <p>que juntaba al amigo con la amiga.</p>
+      <p>Y alzamos la distancia</p>
+      <p>entre las amistades divididas.</p>
+      <div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti ipsam voluptas
+          doloribus, aperiam eligendi repudiandae aut, vel eius, ipsa voluptatibus voluptate qui harum omnis. Ab porro
+          quisquam natus explicabo mollitia?</p>
+      </div>
+    </div>
+
+    <hr>
+
+    <h3>Code:</h3>
+    <pre>
+      &#x3C;div data-center=&#x22;<span class="centerspan">center:children center:text</span>&#x22; data-stack=&#x22;gap:1&#x22;&#x3E;
+        &#x3C;h2&#x3E;Quisimos aprender la despedida&#x3C;/h2&#x3E;
+        &#x3C;p&#x3E;y rompimos la alianza&#x3C;/p&#x3E;
+        &#x3C;p&#x3E;que juntaba al amigo con la amiga.&#x3C;/p&#x3E;
+        &#x3C;p&#x3E;Y alzamos la distancia&#x3C;/p&#x3E;
+        &#x3C;p&#x3E;entre las amistades divididas.&#x3C;/p&#x3E;
+        &#x3C;div&#x3E;
+          &#x3C;p&#x3E;Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti ipsam voluptas
+            doloribus, aperiam eligendi repudiandae aut, vel eius, ipsa voluptatibus voluptate qui harum omnis. Ab porro
+            quisquam natus explicabo mollitia?&#x3C;/p&#x3E;
+        &#x3C;/div&#x3E;
+      &#x3C;/div&#x3E;
+    </pre>
+  </section>
+
+  <hr>
+
+  <div data-stack="gap:1">
+    <label for="text">
+      <h3>Edit:</h3>
+    </label>
+    <input type="text" id="text" data-vivo="input:updateText" value="center:children center:text" />
+
+    <hr>
+
+    <h3>API:</h3>
+    <small data-stack>
+      <pre>center:[children, text]</pre>
+    </small>
+    <small>
+      <code>center:children</code> will center elements as block-level elements.
+      <code>center:text</code> will center the text within the elements.
+    </small>
+
+
+  </div>
+
+</body>
+
+</html>

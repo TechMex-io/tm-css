@@ -669,12 +669,6 @@
   [data-switcher~="gap:3"] {
     --switcher-gap: 3rem;
   }
-  [data-switcher~="threshold:30rem"] {
-    --collapse-at: 30rem;
-  }
-  [data-switcher~="threshold:40rem"] {
-    --collapse-at: 40rem;
-  }
   [data-switcher~="collapse:sm"] {
     --collapse-at: 25rem;
   }
@@ -746,16 +740,16 @@
   [data-cover~="padding:3"] {
     --cover-padding: 3rem;
   }
-  [data-cover~="block-size:25"] {
+  [data-cover~="height:25"] {
     --block-size: 25vh;
   }
-  [data-cover~="block-size:50"] {
+  [data-cover~="height:50"] {
     --block-size: 50vh;
   }
-  [data-cover~="block-size:75"] {
+  [data-cover~="height:75"] {
     --block-size: 75vh;
   }
-  [data-cover~="block-size:100"] {
+  [data-cover~="height:100"] {
     --block-size: 100vh;
   }
 }

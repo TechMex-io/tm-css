@@ -14,7 +14,7 @@
       margin-block-end: 1.25rem;
     }
 
-    [data-container] {
+    [data-container]:not(.nav) {
       border: 1px solid #ddd;
       padding: 1rem;
     }
@@ -35,8 +35,19 @@
 
 <body>
 
-  <header>
+  <header data-container="width:1040" class="nav">
     <h1>Layouts - Container</h1>
+    <div data-cluster="gap:1" style="margin-block-start: 1rem;">
+      <p><a href="../index.html">Elements</a></p>
+      <p><a href="./container.html">Container</a></p>
+      <p><a href="./stack.html">Stack</a></p>
+      <p><a href="./cluster.html">Cluster</a></p>
+      <p><a href="./split.html">Split</a></p>
+      <p><a href="./switcher.html">Switcher</a></p>
+      <p><a href="./cover.html">Cover</a></p>
+      <p><a href="./center.html">Center</a></p>
+
+    </div>
   </header>
 
   <section>

@@ -10,7 +10,7 @@
 
   <link rel="stylesheet" href="../dist/styles.min.css">
   <style>
-    [data-cluster] {
+    .demo {
       background-color: hsl(205deg 100% 95% / .85);
       min-block-size: 4rem;
     }
@@ -44,13 +44,24 @@
 
   <header>
     <h1>Layouts - Cluster</h1>
+    <div data-cluster="gap:1" style="margin-block-start: 1rem;">
+      <p><a href="../index.html">Elements</a></p>
+      <p><a href="./container.html">Container</a></p>
+      <p><a href="./stack.html">Stack</a></p>
+      <p><a href="./cluster.html">Cluster</a></p>
+      <p><a href="./split.html">Split</a></p>
+      <p><a href="./switcher.html">Switcher</a></p>
+      <p><a href="./cover.html">Cover</a></p>
+      <p><a href="./center.html">Center</a></p>
+
+    </div>
   </header>
 
 
 
   <section>
     <h3>Demo:</h3>
-    <div data-cluster="justify:center align:center gap:2">
+    <div data-cluster="justify:center align:center gap:2" class="demo">
       <p><a href="#">Home</a></p>
       <p><a href="#">About</a></p>
       <p><a href="#">Contact</a></p>

@@ -36,7 +36,7 @@
 [data-cover~="padding:2"] { --cover-padding: 2rem; }
 [data-cover~="padding:3"] { --cover-padding: 3rem; }
 
-[data-cover~="block-size:25"] { --block-size: 25vh; }
-[data-cover~="block-size:50"] { --block-size: 50vh; }
-[data-cover~="block-size:75"] { --block-size: 75vh; }
-[data-cover~="block-size:100"] { --block-size: 100vh; }
+[data-cover~="height:25"] { --block-size: 25vh; }
+[data-cover~="height:50"] { --block-size: 50vh; }
+[data-cover~="height:75"] { --block-size: 75vh; }
+[data-cover~="height:100"] { --block-size: 100vh; }

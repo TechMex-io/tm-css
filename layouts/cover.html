@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="CSS Stuffs">
+  <title>Layouts</title>
+
+  <link rel="stylesheet" href="../dist/styles.min.css">
+  <style>
+    [data-cluster] {
+      min-block-size: 4rem;
+    }
+
+    section:not([data-cluster], [data-cover-main]) {
+      margin-block-start: 3rem;
+
+      >*+* {
+        margin-block-start: 2rem;
+      }
+    }
+
+    nav {
+      padding: 1rem;
+    }
+
+    [data-cover] {
+      border: 1px solid #ddd;
+    }
+  </style>
+  <script type="module">
+    import { createSignal, createHandler } from '../scripts/vivo.js'
+
+    const [text, setText] = createSignal('text', 'height:100')
+    const coverEl = document.querySelector('[data-cover]');
+    const spanEl = document.querySelector('.coverspan');
+    createHandler('updateText', e => {
+      setText(e.target.value.trim());
+      coverEl.setAttribute('data-cover', text());
+      spanEl.textContent = text();
+    })
+
+  </script>
+</head>
+
+<body data-container="width:1040">
+
+  <header>
+    <h1>Layouts - Cover</h1>
+    <div data-cluster="gap:1" style="margin-block-start: 1rem;">
+      <p><a href="../index.html">Elements</a></p>
+      <p><a href="./container.html">Container</a></p>
+      <p><a href="./stack.html">Stack</a></p>
+      <p><a href="./cluster.html">Cluster</a></p>
+      <p><a href="./split.html">Split</a></p>
+      <p><a href="./switcher.html">Switcher</a></p>
+      <p><a href="./cover.html">Cover</a></p>
+      <p><a href="./center.html">Center</a></p>
+
+    </div>
+  </header>
+
+
+
+  <section>
+    <h3>Demo:</h3>
+    <header class="site-header" data-cover="padding:0 height:100">
+      <nav class="site-nav" data-cluster="gap:1 align:center justify:between">
+        <span class="logo"><a href="/">DH</a></span>
+
+        <section data-cluster="align:center gap:2">
+          <ul data-cluster="align:center gap:2">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+
+          <p><a tel="123-456-7890">123-456-7890</a></p>
+
+          <button>Get a quote</button>
+        </section>
+      </nav>
+
+      <section data-cover-main data-center="center:text" data-stack="gap:1">
+        <h1>Dogwood Homes</h1>
+        <h2>Contracting &amp; Design Studio</h2>
+        <p>Little Rock, AR</p>
+      </section>
+
+    </header>
+
+    <hr>
+
+    <h3>Code:</h3>
+    <pre>
+  &#x3C;header class=&#x22;site-header&#x22; data-cover=&#x22;<span class="coverspan">height:100</span>&#x22;&#x3E;
+  &#x3C;nav class=&#x22;site-nav&#x22; data-cluster=&#x22;gap:1 align:center justify:between&#x22;&#x3E;
+    &#x3C;span class=&#x22;logo&#x22;&#x3E;&#x3C;a href=&#x22;/&#x22;&#x3E;DH&#x3C;/a&#x3E;&#x3C;/span&#x3E;
+
+    &#x3C;section data-cluster=&#x22;align:center gap:2&#x22;&#x3E;
+      &#x3C;ul data-cluster=&#x22;align:center gap:2&#x22;&#x3E;
+        &#x3C;li&#x3E;&#x3C;a href=&#x22;#&#x22;&#x3E;Home&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+        &#x3C;li&#x3E;&#x3C;a href=&#x22;#&#x22;&#x3E;About&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+        &#x3C;li&#x3E;&#x3C;a href=&#x22;#&#x22;&#x3E;Contact&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+        &#x3C;li&#x3E;&#x3C;a href=&#x22;#&#x22;&#x3E;Blog&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+      &#x3C;/ul&#x3E;
+
+      &#x3C;p&#x3E;&#x3C;a tel=&#x22;123-456-7890&#x22;&#x3E;123-456-7890&#x3C;/a&#x3E;&#x3C;/p&#x3E;
+
+      &#x3C;button&#x3E;Get a quote&#x3C;/button&#x3E;
+    &#x3C;/section&#x3E;
+  &#x3C;/nav&#x3E;
+
+  &#x3C;section data-cover-main data-center=&#x22;center:text&#x22; data-stack=&#x22;gap:1&#x22;&#x3E;
+    &#x3C;h1&#x3E;Dogwood Homes&#x3C;/h1&#x3E;
+    &#x3C;h2&#x3E;Contracting &#x26;amp; Design Studio&#x3C;/h2&#x3E;
+    &#x3C;p&#x3E;Little Rock, AR&#x3C;/p&#x3E;
+  &#x3C;/section&#x3E;
+
+&#x3C;/header&#x3E;
+</pre>
+  </section>
+
+  <hr>
+
+  <div data-stack="gap:1">
+    <label for="text">
+      <h3>Edit:</h3>
+    </label>
+    <input type="text" id="text" data-vivo="input:updateText" value="padding:1 height:100" />
+
+    <hr>
+
+    <h3>API:</h3>
+    <small data-stack>
+      <pre>height:[25, 50, 75, 100] (25vh, 50vh, 75vh, 100vh)<br>padding:[1, 2, 3]</pre>
+    </small>
+
+    <small>
+      note: to center content within the cover element, you must add a container with a <code>data-cover-main</code>
+      attribute. to center elements and/or text within the container, add a <code>data-center</code> attribute with it's
+      options.
+    </small>
+
+
+  </div>
+
+</body>
+
+</html>
