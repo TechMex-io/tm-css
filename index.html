@@ -7,104 +7,344 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="description" content="CSS Stuffs">
   <title>Elements</title>
-
   <link rel="stylesheet" href="./dist/styles.min.css">
 </head>
 
 <body data-container="width:1040" style="--body-space: 2.5rem;">
-
   <header>
     <h1>Elements</h1>
-
     <p data-cluster="gap:1" style="margin-block-start: 2rem;">
       <a href="./">Elements</a>
       <a href="./layouts.html">Layouts</a>
     </p>
   </header>
+  <div data-stack="gap:3">
+    <h1>Header level 1</h1>
+    <h2>Header level 2</h2>
+    <h3>Header level 3</h3>
+    <h4>Header level 4</h4>
+    <h5>Header level 5</h5>
+    <h6>Header level 6</h6>
+    <p>This is an anchor tag/hyper link: <a href="https://tech-mex.io">Tech-Mex</a></p>
+    <p>Paragraphs look like this. Font size along with line height and maximum width are optimized for reading.</p>
+    <p><em>Italic</em>, <strong>bold</strong>, and <code>monospace</code>. Itemized lists look like:</p>
+    <ul>
+      <li>this one</li>
+      <li>that one</li>
+      <li>the other one</li>
+    </ul>
+    <p><strong>Here's a block quote</strong>:</p>
+    <blockquote>
+      <p>Man surprised me most about humanity. Because he sacrifices his health in order to make money. Then he
+        sacrifices
+        money to recuperate his health. And then he is so anxious about the future that he does not enjoy the present;
+        the
+        result being that he does not live in the present or the future; he lives as if he is never going to die, and
+        then
+        dies having never really lived. -James J Lachard
+      </p>
+    </blockquote>
+    <h2 id="an-h2-header">An h2 header</h2>
+    <p><strong>Some code blocks</strong></p>
+    <pre><code>define foobar() {
+  print "Welcome to flavor country!";
+}</code></pre>
+    <div class="sourceCode">
+      <pre class="sourceCode python"><code class="sourceCode python"><span class="im">import</span> time
+<span class="co"># Quick, count to ten!</span>
+<span class="cf">for</span> i <span class="op">in</span> <span class="bu">range</span>(<span class="dv">10</span>):
+  <span class="co"># (but not *too* quick)</span>
+  time.sleep(<span class="fl">0.5</span>)
+  <span class="bu">print</span> i</code></pre>
+    </div>
+    <h3 id="an-h3-header">An h3 header</h3>
+    <p>A nested list:</p>
+    <ol data-stack="gap:1">
+      <li>
+        <p>First, get these ingredients:</p>
+        <ul>
+          <li>carrots</li>
+          <li>celery</li>
+          <li>lentils</li>
+        </ul>
+      </li>
+      <li>
+        <p>Boil some water.</p>
+      </li>
+      <li>
+        <p>Dump everything in the pot and follow this algorithm:</p>
+        <pre>find wooden spoon
+uncover pot
+stir
+cover pot
+balance wooden spoon precariously on pot handle
+wait 10 minutes
+goto first step (or shut off burner when done)</pre>
+        <p>Do not bump wooden spoon or it will fall.</p>
+      </li>
+    </ol>
+    <p>A horizontal line:</p>
+    <hr>
+    <p>
+      Here's a link to <a href="http://foo.bar">a website</a>, to a <a href="./layouts.html">local doc</a>, and to a <a
+        href="#an-h2-header">section heading in the current doc</a>. Here's a footnote <a href="#fn1"
+        id="fnref1"><sup>1</sup></a>.
+      <br>
+      <small>Notice the nifty scrolling?</small>
+    </p>
+    <p>Tables can look like this:</p>
+    <table>
+      <caption>
+        Shoes, their sizes, and what they're made of
+      </caption>
+      <thead>
+        <tr>
+          <th align="left">size</th>
+          <th align="left">material</th>
+          <th align="left">color</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="left">9</td>
+          <td align="left">leather</td>
+          <td align="left">brown</td>
+        </tr>
+        <tr>
+          <td align="left">10</td>
+          <td align="left">hemp canvas</td>
+          <td align="left">natural</td>
+        </tr>
+        <tr>
+          <td align="left">11</td>
+          <td align="left">glass</td>
+          <td align="left">transparent</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>Multi-line tables:</p>
+    <table style="width:46%;">
+      <colgroup>
+        <col width="13%">
+        <col width="31%">
+      </colgroup>
+      <thead>
+        <tr>
+          <th align="left">keyword</th>
+          <th align="left">text</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="left">red</td>
+          <td align="left">Sunsets, apples, and other red or reddish things.</td>
+        </tr>
+        <tr>
+          <td align="left">green</td>
+          <td align="left">Leaves, grass, frogs and other things it's not easy being.</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>A horizontal rule follows.</p>
+    <hr>
+    <p>Images are responsive by default:</p>
+    <div>
+      <figure>
+        <img alt="example image" src="./mixyt2.png" title="An exemplary image">
+        <figcaption>example image</figcaption>
+      </figure>
+    </div>
+    <hr>
+    <h1 id="form-elements">Form Elements</h1>
+    <form>
+      <div id="forms__input" data-stack="gap:3">
+        <h3>Input fields</h3>
+        <label for="input__text" data-stack="gap:1">
+          Text Input (stacked)
+          <input id="input__text" placeholder="Text Input" type="text">
+        </label>
+        <label for="input__text--inline" data-cluster="gap:1 align:center">
+          Text Input (inline)
+          <input id="input__text--inline" placeholder="Text Input" type="text">
+        </label>
+        <p>
+          <label for="input__password">Password</label>
+          <input id="input__password" placeholder="Type your Password" type="password">
+        </p>
+        <p>
+          <label for="input__webaddress">Web Address</label>
+          <input id="input__webaddress" placeholder="http://yoursite.com" type="url">
+        </p>
+        <p>
+          <label for="input__emailaddress">Email Address</label>
+          <input id="input__emailaddress" placeholder="name@email.com" type="email">
+        </p>
+        <p>
+          <label for="input__phone">Phone Number</label>
+          <input id="input__phone" placeholder="(999) 999-9999" type="tel">
+        </p>
+        <p>
+          <label for="input__search">Search</label>
+          <input id="input__search" placeholder="Enter Search Term" type="search">
+        </p>
+        <p>
+          <label for="input__text2">Number Input</label>
+          <input id="input__text2" placeholder="Enter a Number" type="number">
+        </p>
+        <p>
+          <label for="input__text3">Error</label>
+          <input id="input__text3" placeholder="Text Input" type="text">
+        </p>
+        <p>
+          <label for="input__text4">Valid</label>
+          <input id="input__text4" placeholder="Text Input" type="text">
+        </p>
+        <p><a href="#top">[Top]</a></p>
+        <label for="select" data-stack="gap:1">
+          <h3>Select menus</h3>
+          <select id="select">
+            <optgroup label="Option Group">
+              <option>Option One</option>
+              <option>Option Two</option>
+              <option>Option Three</option>
+            </optgroup>
+          </select>
+        </label>
+        <p><a href="#top">[Top]</a></p>
 
-  <p>This css takes advantage of semantic HTML elements. Here are some guidelines on how these should be used for the
-    best results.</p>
 
 
 
-  <h2>Body</h2>
+        <div data-stack="gap:1">
+          <h3>Checkboxes</h3>
+          <label for="checkbox1"><input checked="checked" id="checkbox1" name="checkbox" type="checkbox"> Choice
+            A</label>
+          <label for="checkbox2"><input id="checkbox2" name="checkbox" type="checkbox"> Choice B</label>
+          <label for="checkbox3"><input id="checkbox3" name="checkbox" type="checkbox"> Choice C</label>
+        </div>
+        <p><a href="#top">[Top]</a></p>
 
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, sed beatae tempore est minima repellendus consectetur
-    quaerat inventore quas asperiores veniam doloribus explicabo natus cum nesciunt perspiciatis deleniti odit?
-    Repellat?
-  </p>
+        <label for="textarea" data-stack="gap:1">
+          <h3>Textarea</h3>
+          <textarea cols="48" id="textarea" placeholder="Enter your message here" rows="8"></textarea>
+        </label>
+        </p>
+        <p><a href="#top">[Top]</a></p>
+        <h3>Action buttons</h3>
+        <p data-cluster="gap:1">
+          <input type="submit" value="input type=submit"> <input type="button" value="input type=button"> <input
+            type="reset" value="input type=reset"> <input disabled="" type="submit" value="input disabled">
+        </p>
+        <p data-cluster="gap:1">
+          <button type="submit">&lt;button type=submit&gt;</button> <button type="button">&lt;button
+            type=button&gt;</button> <button type="reset">&lt;button type=reset&gt;</button> <button disabled=""
+            type="button">&lt;button disabled&gt;</button>
+        </p>
+        <p><a href="#top">[Top]</a></p>
+    </form>
+    <div>
+      <hr>
+      <ol>
+        <li id="fn1">
+          <p>Footnote text goes here.<a href="#fnref1">↩</a></p>
+        </li>
+      </ol>
+    </div>
+  </div>
+  <!--
+         <header>
+           <h1>Elements</h1>
+
+           <p data-cluster="gap:1" style="margin-block-start: 2rem;">
+             <a href="./">Elements</a>
+             <a href="./layouts.html">Layouts</a>
+           </p>
+         </header>
+
+         <p>This css takes advantage of semantic HTML elements. Here are some guidelines on how these should be used for the
+           best results.</p>
 
 
-  <h2>Buttons</h2>
 
-  <p>For a link button, wrap the button in an <code>&lt;a&gt;</code> tag. For example-</p>
+         <h2>Body</h2>
 
-  <pre>
-&lt;a href=&quot;https://example.com&quot;&gt;
-&lt;button&gt;Click me!&lt;/button&gt;
-&lt;/a&gt;</pre>
-
-
-  <h2>Code</h2>
-
-  <p>Use <code>&lt;code&gt;</code> for short inline code.</p>
-
-  <p>Use <code>&lt;pre&gt;</code> for code blocks.</p>
-
-  <blockquote>These two shouldn't be nested, but if they are, the child element will clear it's own style and match the
-    parent.</blockquote>
-
-  <p>Use <code>&lt;kbd&gt;</code> for keyboard input. For example, <kbd>ALT + F4</kbd></p>
+         <p>
+           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, sed beatae tempore est minima repellendus consectetur
+           quaerat inventore quas asperiores veniam doloribus explicabo natus cum nesciunt perspiciatis deleniti odit?
+           Repellat?
+         </p>
 
 
-  <h2>Details</h2>
+         <h2>Buttons</h2>
 
-  <p>The <code>&lt;details&gt;</code> element can make a toggle-able dropdown without any JavaScript. Here's an example-
-  </p>
+         <p>For a link button, wrap the button in an <code>&lt;a&gt;</code> tag. For example-</p>
 
-  <details>
-    <summary>Click me!</summary>
-    <p>Lorem ipsum dolor sit amet.</p>
-  </details>
-
-  <p>Here's the code-</p>
-
-  <pre>
-&lt;details&gt;
-&lt;summary&gt;Click me!&lt;/summary&gt;
-&lt;p&gt;Lorem ipsum dolor sit amet.&lt;/p&gt;
-&lt;/details&gt;
-</pre>
+         <pre>
+         &lt;a href=&quot;https://example.com&quot;&gt;
+         &lt;button&gt;Click me!&lt;/button&gt;
+         &lt;/a&gt;</pre>
 
 
-  <h2>Text</h2>
+         <h2>Code</h2>
 
-  <p>Wrap all body text in <code>&lt;p&gt;</code> tags, unless it's the sole child of another element. Here are
-    examples-</p>
+         <p>Use <code>&lt;code&gt;</code> for short inline code.</p>
 
-  <pre>
-&lt;blockquote&gt;
-Hello, world!
-&lt;/blockquote&gt;
-</pre>
+         <p>Use <code>&lt;pre&gt;</code> for code blocks.</p>
 
-  <pre>
-&lt;blockquote&gt;
-&lt;p&gt;Hello, world!&lt;/p&gt;
-&lt;button&gt;Click me!&lt;/button&gt;
-&lt;/blockquote&gt;
-</pre>
+         <blockquote>These two shouldn't be nested, but if they are, the child element will clear it's own style and match the
+           parent.</blockquote>
 
-  <pre>
-&lt;ul&gt;
-&lt;li&gt;Hello, world!&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Line 1&lt;/p&gt;
-&lt;img src=&quot;https://example.com/image.png&quot;&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-</pre>
+         <p>Use <code>&lt;kbd&gt;</code> for keyboard input. For example, <kbd>ALT + F4</kbd></p>
+
+
+         <h2>Details</h2>
+
+         <p>The <code>&lt;details&gt;</code> element can make a toggle-able dropdown without any JavaScript. Here's an example-
+         </p>
+
+         <details>
+           <summary>Click me!</summary>
+           <p>Lorem ipsum dolor sit amet.</p>
+         </details>
+
+         <p>Here's the code-</p>
+
+         <pre>
+         &lt;details&gt;
+         &lt;summary&gt;Click me!&lt;/summary&gt;
+         &lt;p&gt;Lorem ipsum dolor sit amet.&lt;/p&gt;
+         &lt;/details&gt;
+         </pre>
+
+
+         <h2>Text</h2>
+
+         <p>Wrap all body text in <code>&lt;p&gt;</code> tags, unless it's the sole child of another element. Here are
+           examples-</p>
+
+         <pre>
+         &lt;blockquote&gt;
+         Hello, world!
+         &lt;/blockquote&gt;
+         </pre>
+
+         <pre>
+         &lt;blockquote&gt;
+         &lt;p&gt;Hello, world!&lt;/p&gt;
+         &lt;button&gt;Click me!&lt;/button&gt;
+         &lt;/blockquote&gt;
+         </pre>
+
+         <pre>
+         &lt;ul&gt;
+         &lt;li&gt;Hello, world!&lt;/li&gt;
+         &lt;li&gt;
+         &lt;p&gt;Line 1&lt;/p&gt;
+         &lt;img src=&quot;https://example.com/image.png&quot;&gt;
+         &lt;/li&gt;
+         &lt;/ul&gt;
+         </pre>
+         -->
 </body>
 
 </html>
