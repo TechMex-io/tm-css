@@ -27,6 +27,7 @@
   --font-size-xxl: 2rem;
   --btn-font-size: --font-size-base;
 
+
   /* Spacing */
   --body-space: 1rem;
   --input-padding-block: .75rem;
@@ -57,6 +58,13 @@
   --color-link-secondary-dark: hsl(210 75% 55% / 1); /* Slightly muted blue */
   --color-link-text-dark: hsl(220 15% 90% / 1); /* Matching primary text */
   --color-accent-text-dark: hsl(185 70% 42% / 1); /* Same teal as light theme */
+
+
+  /* Inputs */
+  --input-bg-color: var(--color-bg-secondary);
+  --input-text-color: var(--color-text-secondary);
+  --input-border-color: var(--color-bg-muted);
+
 
 }
 

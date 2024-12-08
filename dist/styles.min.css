@@ -71,6 +71,9 @@
     --color-link-secondary-dark: hsl(210 75% 55% / 1);
     --color-link-text-dark: hsl(220 15% 90% / 1);
     --color-accent-text-dark: hsl(185 70% 42% / 1);
+    --input-bg-color: var(--color-bg-secondary);
+    --input-text-color: var(--color-text-secondary);
+    --input-border-color: var(--color-bg-muted);
   }
   @media (prefers-color-scheme: dark) {
     :root {
@@ -272,9 +275,9 @@
     padding-block: var(--input-padding-block);
     padding-inline: var(--input-padding-inline);
     margin-block-end: initial;
-    background: var(--color-bg-secondary);
-    color: var(--color-text-secondary);
-    border: 1px solid var(--color-bg-muted);
+    background: var(--input-bg-color);
+    color: var(--input-text-color);
+    border: 1px solid var(--input-border-color);
     border-radius: 4px;
   }
   img {
@@ -394,10 +397,10 @@
     margin-block-end: 0;
   }
   a {
-    color: var(--nc-lk-1);
+    color: var(--color-link-primary);
   }
   a:hover {
-    color: var(--nc-lk-2);
+    color: var(--color-link-secondary);
   }
   a img {
     margin-block-end: 0;

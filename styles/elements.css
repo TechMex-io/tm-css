@@ -125,9 +125,9 @@ input {
   padding-block: var(--input-padding-block);
   padding-inline: var(--input-padding-inline);
   margin-block-end: initial;
-  background: var(--color-bg-secondary);
-  color: var(--color-text-secondary);
-  border: 1px solid var(--color-bg-muted);
+  background: var(--input-bg-color);
+  color: var(--input-text-color);
+  border: 1px solid var(--input-border-color);
   border-radius: 4px;
 }
 
@@ -287,11 +287,11 @@ ol ol {
 
 /* Link styles */
 a {
-  color: var(--nc-lk-1);
+  color: var(--color-link-primary);
 }
 
 a:hover {
-  color: var(--nc-lk-2);
+  color: var(--color-link-secondary);
 }
 
 /* Image in link */
