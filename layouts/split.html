@@ -16,8 +16,8 @@
     }
 
     section {
-      background-color: lightblue;
-      padding: 2rem;
+      /* background-color: lightblue;
+      padding: 2rem; */
       margin-block-start: 3rem;
 
       >*+* {
@@ -39,7 +39,7 @@
   </script>
 </head>
 
-<body>
+<body data-container="width:1040">
 
   <header>
     <h1>Layouts - Split</h1>
@@ -47,6 +47,7 @@
 
 
   <section>
+    <h3>Demo:</h3>
     <form data-split="3/4 gap:1 collapse:sm align:end">
       <label for="email" data-stack="gap:1">
         Email Adress
@@ -55,6 +56,9 @@
       <button>Subscribe</button>
     </form>
 
+    <hr>
+
+    <h3>Code:</h3>
     <pre>
       &#x3C;form data-split=&#x22;<span>3/4 gap:1 collapse:sm align:end</span>&#x22;&#x3E;
         &#x3C;label for=&#x22;email&#x22; data-stack=&#x22;gap:1&#x22;&#x3E;
@@ -66,8 +70,22 @@
     </pre>
   </section>
 
-  <input type="text" data-vivo="input:updateText" value="3/4 gap:1 collapse:sm align:end" />
+  <hr>
 
+  <div data-stack="gap:1">
+    <h3>Edit:</h3>
+    <input type="text" data-vivo="input:updateText" value="3/4 gap:1 collapse:sm align:end" />
+  </div>
+
+  <hr>
+
+  <h3>API:</h3>
+  <pre>
+[1/4, 1/3, 3/4, 2/3]
+collapse:[sm, md, lg]
+align:[start, end, between, around]
+gap:[1, 2, 3]
+  </pre>
 
 </body>
 

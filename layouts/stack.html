@@ -22,17 +22,22 @@
     textarea {
       padding: .5rem;
     }
+
+    hr {
+      margin-block: 3rem;
+    }
   </style>
 </head>
 
-<body>
+<body data-container="width:1040">
 
   <header>
     <h1>Layouts - Stack</h1>
   </header>
 
 
-  <section data-container="width:1040">
+  <section data-stack="gap:2">
+    <h3>Demo:</h3>
     <form data-stack="gap:2">
       <label for="name" data-stack="gap:1">
         Name
@@ -52,8 +57,9 @@
       <button type="submit">Submit</button>
     </form>
 
-    <br><br>
+    <hr>
 
+    <h3>Code:</h3>
     <pre>
 &#x3C;form data-stack=&#x22;gap:2&#x22;&#x3E;
   &#x3C;label for=&#x22;name&#x22; data-stack=&#x22;gap:1&#x22;&#x3E;

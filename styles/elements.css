@@ -84,9 +84,16 @@ button,
 input[type="submit"],
 input[type="reset"],
 input[type="button"] {
-  font-size: 1rem;
-  padding-block: 6px;
-  padding-inline: 12px;
+  /* API:
+  --btn-padding-block
+  --btn-padding-inline
+  --btn-font-size
+  --color-link-primary
+  --color-text-white
+  */
+  font-size: var(--btn-font-size);
+  padding-block: var(--btn-padding-block);
+  padding-inline: var(--btn-padding-inline);
   text-align: center;
   background: var(--color-link-primary);
   color: var(--color-text-white);
@@ -115,8 +122,8 @@ td, th {
 textarea,
 select,
 input {
-  padding-block: 6px;
-  padding-inline: 12px;
+  padding-block: var(--input-padding-block);
+  padding-inline: var(--input-padding-inline);
   margin-block-end: initial;
   background: var(--color-bg-secondary);
   color: var(--color-text-secondary);

@@ -14,8 +14,17 @@
       margin-block-end: 1.25rem;
     }
 
-    section {
+    [data-container] {
+      border: 1px solid #ddd;
+      padding: 1rem;
+    }
+
+    section:first-of-type {
       margin-block-start: 3rem;
+    }
+
+    hr {
+      margin-block: 3rem;
     }
 
     span {
@@ -31,40 +40,49 @@
   </header>
 
   <section>
-    <div data-container="width:1040" style="background-color: lightblue; padding: 2rem;">
+    <div data-container="width:1040" data-stack="gap:1">
+      <h3>Demo</h3>
       <p>
-        Three widths are available:
-        <br>
-        <span>1040px</span>
-        <br>
-        <span>1200px</span>
-        <br>
-        <span>1350px</span>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum laboriosam inventore dicta accusantium
+        perspiciatis reiciendis id nesciunt? Nobis adipisci, atque qui magnam tempore debitis, quam quisquam facilis, ex
+        consequatur itaque!
       </p>
 
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic illum error facilis eum officia maiores adipisci
+        sequi, ex possimus ullam a reiciendis necessitatibus tempore molestias quae, culpa quod accusamus dolorem!</p>
+    </div>
+
+    <div data-container="width:1040" data-stack="gap:1">
+      <h3>Code</h3>
       <pre>
-&lt;div data-container="width:1040"&gt;
-  &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, quod.&lt;/p&gt;
-&lt;/div&gt;
-</pre>
+  &lt;div data-container="width:1040"&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, quod.&lt;/p&gt;
+  &lt;/div&gt;
+      </pre>
     </div>
 
   </section>
 
 
+  <hr>
+
+
   <section>
-    <div data-container="padding:1" style="background-color: lightblue; padding: 2rem; --container-size: 76.6875rem;">
+    <div data-container="padding:1" style="--container-size: 76.6875rem" data-stack="gap:1">
+      <h3>Demo</h3>
       <p>Custom widths can be declared by overriding the <code>--container-size</code> property of the
         <code>[data-container]</code> element.
       </p>
+    </div>
 
+    <div data-container="padding:1" style="--container-size: 76.6875rem" data-stack="gap:1">
+      <h3>Code</h3>
       <pre>
-        &lt;div data-container style="--container-size: 76.6875rem"&gt;
-          &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, quod.&lt;/p&gt;
-        &lt;/div&gt;
-        </pre>
-
-
+      &lt;div data-container style="--container-size: 76.6875rem"&gt;
+        &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, quod.&lt;/p&gt;
+      &lt;/div&gt;
+      </pre>
+    </div>
   </section>
 
 

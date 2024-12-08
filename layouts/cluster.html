@@ -11,13 +11,13 @@
   <link rel="stylesheet" href="../dist/styles.min.css">
   <style>
     [data-cluster] {
-      background-color: hsl(0 0% 100% / .35);
+      background-color: hsl(205deg 100% 95% / .85);
       min-block-size: 4rem;
     }
 
     section {
-      background-color: lightblue;
-      padding: 2rem;
+      /* background-color: lightblue;
+      padding: 2rem; */
       margin-block-start: 3rem;
 
       >*+* {
@@ -40,7 +40,7 @@
   </script>
 </head>
 
-<body>
+<body data-container="width:1040">
 
   <header>
     <h1>Layouts - Cluster</h1>
@@ -49,12 +49,17 @@
 
 
   <section>
+    <h3>Demo:</h3>
     <div data-cluster="justify:center align:center gap:2">
       <p><a href="#">Home</a></p>
       <p><a href="#">About</a></p>
       <p><a href="#">Contact</a></p>
       <p><a href="#">Blog</a></p>
     </div>
+
+    <hr>
+
+    <h3>Code:</h3>
     <pre>
     &#x3C;div data-cluster=&#x22;<span>justify:center align:center gap:2</span>&#x22;&#x3E;
       &#x3C;p&#x3E;&#x3C;a href=&#x22;#&#x22;&#x3E;Home&#x3C;/a&#x3E;&#x3C;/p&#x3E;
@@ -65,7 +70,18 @@
       </pre>
   </section>
 
-  <input type="text" data-vivo="input:updateText" value="justify:center align:center gap:2" />
+  <hr>
+
+  <div data-stack="gap:1">
+    <label for="text">
+      <h3>Edit:</h3>
+    </label>
+    <input type="text" id="text" data-vivo="input:updateText" value="justify:center align:center gap:2" />
+    <h3>API:</h3>
+    <small>
+      <pre>justify:[start, end, between, around]<br>align:[start, end, between, around]<br>gap:[1, 2, 3]</pre>
+    </small>
+  </div>
 
 </body>
 
