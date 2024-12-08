@@ -462,13 +462,13 @@
     --stack-gap: 0;
   }
   [data-stack~="gap:1"] {
-    --stack-gap: 1rem;
+    --stack-gap: clamp(1.5vw, 2vw, 1rem);
   }
   [data-stack~="gap:2"] {
-    --stack-gap: 2rem;
+    --stack-gap: clamp(2vw, 4vw, 2rem);
   }
   [data-stack~="gap:3"] {
-    --stack-gap: 3rem;
+    --stack-gap: clamp(3vw, 6vw, 3rem);
   }
   [data-stack~="align:start"] {
     --stack-align: flex-start;

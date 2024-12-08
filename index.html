@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="./dist/styles.min.css">
 </head>
 
-<body data-container="width:1040" style="--body-space: 2.5rem;">
+<body data-container="width:1040 padding:1" style="--body-space: 2.5rem;">
   <header>
     <h1>Elements</h1>
     <p data-cluster="gap:1" style="margin-block-start: 2rem;">
@@ -18,7 +18,7 @@
       <a href="./layouts.html">Layouts</a>
     </p>
   </header>
-  <div data-stack="gap:3">
+  <div data-stack="gap:2">
     <h1>Header level 1</h1>
     <h2>Header level 2</h2>
     <h3>Header level 3</h3>
@@ -46,8 +46,8 @@
     </blockquote>
     <h2 id="an-h2-header">An h2 header</h2>
     <p><strong>Some code blocks</strong></p>
-    <pre><code>define foobar() {
-  print "Welcome to flavor country!";
+    <pre><code>define someFunc() {
+  console.log(&quot;Q'vo mundo?!&quot;);
 }</code></pre>
     <div class="sourceCode">
       <pre class="sourceCode python"><code class="sourceCode python"><span class="im">import</span> time
@@ -155,9 +155,9 @@ goto first step (or shut off burner when done)</pre>
       </figure>
     </div>
     <hr>
-    <h1 id="form-elements">Form Elements</h1>
+    <h2 id="form-elements">Form Elements</h2>
     <form>
-      <div id="forms__input" data-stack="gap:3">
+      <div id="forms__input" data-stack="gap:2">
         <h3>Input fields</h3>
         <label for="input__text" data-stack="gap:1">
           Text Input (stacked)
@@ -215,12 +215,21 @@ goto first step (or shut off burner when done)</pre>
 
 
 
-        <div data-stack="gap:1">
-          <h3>Checkboxes</h3>
-          <label for="checkbox1"><input checked="checked" id="checkbox1" name="checkbox" type="checkbox"> Choice
-            A</label>
-          <label for="checkbox2"><input id="checkbox2" name="checkbox" type="checkbox"> Choice B</label>
-          <label for="checkbox3"><input id="checkbox3" name="checkbox" type="checkbox"> Choice C</label>
+        <div data-switcher="gap:2">
+          <div data-stack="gap:1">
+            <h3>Checkboxes</h3>
+            <label for="checkbox1"><input checked="checked" id="checkbox1" name="checkbox" type="checkbox"> Choice
+              A</label>
+            <label for="checkbox2"><input id="checkbox2" name="checkbox" type="checkbox"> Choice B</label>
+            <label for="checkbox3"><input id="checkbox3" name="checkbox" type="checkbox"> Choice C</label>
+          </div>
+
+          <div data-stack="gap:1">
+            <h3>Radios</h3>
+            <label for="radio1"><input checked="checked" id="radio1" name="radio" type="radio"> Choice A</label>
+            <label for="radio2"><input id="radio2" name="radio" type="radio"> Choice B</label>
+            <label for="radio3"><input id="radio3" name="radio" type="radio"> Choice C</label>
+          </div>
         </div>
         <p><a href="#top">[Top]</a></p>
 
