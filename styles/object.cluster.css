@@ -30,16 +30,14 @@
 [data-cluster~="align:stretch"] { --align: flex-stretch; }
 
 
-[data-cluster~="gap:0"] { --cluster-gap: 0; }
-[data-cluster~="gap:1"] { --cluster-gap: 1rem; }
-[data-cluster~="gap:2"] { --cluster-gap: 2rem; }
-[data-cluster~="gap:3"] { --cluster-gap: 3rem; }
+[data-cluster~="gap:sm"] { --cluster-gap: var(--layout-cluster-gap-sm); }
+[data-cluster~="gap:md"] { --cluster-gap: var(--layout-cluster-gap-md); }
+[data-cluster~="gap:lg"] { --cluster-gap: var(--layout-cluster-gap-lg); }
 
 
-[data-cluster~="padding:.5"] { --cluster-padding: .5rem }
-[data-cluster~="padding:1"] { --cluster-padding: 1rem }
-[data-cluster~="padding:2"] { --cluster-padding: 2rem }
-[data-cluster~="padding:3"] { --cluster-padding: 3rem }
+[data-cluster~="padding:sm"] { --cluster-padding: var(--layout-cluster-padding-sm) }
+[data-cluster~="padding:md"] { --cluster-padding: var(--layout-cluster-padding-md) }
+[data-cluster~="padding:lg"] { --cluster-padding: var(--layout-cluster-padding-lg) }
 
 [data-cluster~="distribute:equally"] > * { flex: 1; }
 

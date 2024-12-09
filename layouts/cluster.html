@@ -28,7 +28,7 @@
   <script type="module">
     import { createSignal, createHandler } from '../scripts/vivo.js'
 
-    const [text, setText] = createSignal('text', 'justify:center align:center gap:2')
+    const [text, setText] = createSignal('text', 'justify:center align:center gap:md')
     const clusterEl = document.querySelector('.demo');
     const spanEl = document.querySelector('.clusterspan');
     createHandler('updateText', e => {
@@ -40,11 +40,11 @@
   </script>
 </head>
 
-<body data-container="width:1040">
+<body data-container="width:sm">
 
   <header>
     <h1>Layouts - Cluster</h1>
-    <div data-cluster="gap:1" style="margin-block-start: 1rem;">
+    <div data-cluster="gap:sm" style="margin-block-start: 1rem;">
       <p><a href="../index.html">Elements</a></p>
       <p><a href="./container.html">Container</a></p>
       <p><a href="./stack.html">Stack</a></p>
@@ -61,7 +61,7 @@
 
   <section>
     <h3>Demo:</h3>
-    <div data-cluster="justify:center align:center gap:2" class="demo">
+    <div data-cluster="justify:center align:center gap:md" class="demo">
       <p><a href="#">Home</a></p>
       <p><a href="#">About</a></p>
       <p><a href="#">Contact</a></p>
@@ -72,7 +72,7 @@
 
     <h3>Code:</h3>
     <pre>
-    &#x3C;div data-cluster=&#x22;<span class="clusterspan">justify:center align:center gap:2</span>&#x22;&#x3E;
+    &#x3C;div data-cluster=&#x22;<span class="clusterspan">justify:center align:center gap:md</span>&#x22;&#x3E;
       &#x3C;p&#x3E;&#x3C;a href=&#x22;#&#x22;&#x3E;Home&#x3C;/a&#x3E;&#x3C;/p&#x3E;
       &#x3C;p&#x3E;&#x3C;a href=&#x22;#&#x22;&#x3E;About&#x3C;/a&#x3E;&#x3C;/p&#x3E;
       &#x3C;p&#x3E;&#x3C;a href=&#x22;#&#x22;&#x3E;Contact&#x3C;/a&#x3E;&#x3C;/p&#x3E;
@@ -83,17 +83,17 @@
 
   <hr>
 
-  <div data-stack="gap:1">
+  <div data-stack="gap:sm">
     <label for="text">
       <h3>Edit:</h3>
     </label>
-    <input type="text" id="text" data-vivo="input:updateText" value="justify:center align:center gap:2" />
+    <input type="text" id="text" data-vivo="input:updateText" value="justify:center align:center gap:md" />
 
     <hr>
 
     <h3>API:</h3>
     <small>
-      <pre>justify:[start, end, between, around, center]<br>align:[start, end, center]<br>gap:[1, 2, 3]</pre>
+      <pre>justify:[start, end, between, around, center]<br>align:[start, end, center]<br>gap:[sm, md, lg]</pre>
     </small>
   </div>
 

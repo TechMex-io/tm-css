@@ -42,6 +42,52 @@
   --btn-padding-block: var(--input-padding-block);
   --btn-padding-inline: var(--input-padding-inline);
 
+  /* Container Layout widths */
+  --container-size-sm:  65rem;
+  --container-size-md: 75rem;
+  --container-size-lg: 84.375rem;
+  /* Fluid Spacing for Container Layouts */
+  --layout-container-padding-sm: clamp(1rem, 2vw, 3vw);
+  --layout-container-padding-md: clamp(2rem, 4vw, 6vw);
+  --layout-container-padding-lg: clamp(3rem, 6vw, 9vw);
+
+  /* Fluid Spacing for Stack Layouts */
+  --layout-stack-gap-sm: clamp(1.5vw, 2vw, 1rem);
+  --layout-stack-gap-md: clamp(2vw, 4vw, 2rem);
+  --layout-stack-gap-lg: clamp(3vw, 6vw, 3rem);
+
+  /* Fluid Spacing for Cluster Layouts */
+  --layout-cluster-gap-sm: clamp(1.5vw, 2vw, 1rem);
+  --layout-cluster-gap-md: clamp(2vw, 4vw, 2rem);
+  --layout-cluster-gap-lg: clamp(3vw, 6vw, 3rem);
+
+  --layout-cluster-padding-sm: clamp(1rem, 2vw, 3vw);
+  --layout-cluster-padding-md: clamp(2rem, 4vw, 6vw);
+  --layout-cluster-padding-lg: clamp(3rem, 6vw, 9vw);
+
+  /* Fluid Spacing for Split Layouts */
+  --layout-split-gap-sm: clamp(1.5vw, 2vw, 1rem);
+  --layout-split-gap-md: clamp(2vw, 4vw, 2rem);
+  --layout-split-gap-lg: clamp(3vw, 6vw, 3rem);
+  /* Breakpoints for Split Layouts */
+  --layout-collapse-sm: 25rem; /* 400px */
+  --layout-collapse-md: 40rem; /* 640px */
+  --layout-collapse-lg: 60rem; /* 960px */
+
+  /* Spacing for Switcher Layout */
+  --layout-switcher-gap-sm: clamp(1.5vw, 2vw, 1rem);
+  --layout-switcher-gap-md: clamp(2vw, 4vw, 2rem);
+  --layout-switcher-gap-lg: clamp(3vw, 6vw, 3rem);
+  /* Breakpoints for Switcher Layouts */
+  --layout-collapse-sm: 25rem; /* 400px */
+  --layout-collapse-md: 40rem; /* 640px */
+  --layout-collapse-lg: 60rem; /* 960px */
+
+  /* Spacing for Cover Layouts */
+  --layout-cover-padding-sm: clamp(1rem, 2vw, 3vw);
+  --layout-cover-padding-md: clamp(2rem, 4vw, 6vw);
+  --layout-cover-padding-lg: clamp(3rem, 6vw, 9vw);
+
   /* Light theme */
   --color-text-primary: hsl(220 25% 20% / 1); /* Soft dark blue-gray */
   --color-text-secondary: hsl(220 15% 35% / 1); /* Lighter blue-gray */

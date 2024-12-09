@@ -85,14 +85,14 @@
 }
 
 
-[data-split~="gap:1"] { --split-gap: 1rem; }
-[data-split~="gap:2"] { --split-gap: 2rem; }
-[data-split~="gap:3"] { --split-gap: 3rem; }
+[data-split~="gap:sm"] { --split-gap: var(--layout-split-gap-sm); }
+[data-split~="gap:md"] { --split-gap: var(--layout-split-gap-md); }
+[data-split~="gap:lg"] { --split-gap: var(--layout-split-gap-lg); }
 
 [data-split~="align:start"] { --split-align: flex-start; }
 [data-split~="align:end"] { --split-align: flex-end; }
 [data-split~="align:center"] { --split-align: center; }
 
-[data-split~="collapse:sm"] { --collapse-at: 25rem; }
-[data-split~="collapse:md"] { --collapse-at: 40rem; }
-[data-split~="collapse:lg"] { --collapse-at: 60rem; }
+[data-split~="collapse:sm"] { --collapse-at: var(--layout-collapse-sm); }
+[data-split~="collapse:md"] { --collapse-at: var(--layout-collapse-md); }
+[data-split~="collapse:lg"] { --collapse-at: var(--layout-collapse-lg); }

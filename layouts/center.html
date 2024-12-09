@@ -25,7 +25,7 @@
   <script type="module">
     import { createSignal, createHandler } from '../scripts/vivo.js'
 
-    const [text, setText] = createSignal('text', 'gap:1 collapse:lg')
+    const [text, setText] = createSignal('text', 'gap:sm collapse:lg')
     const centerEl = document.querySelector('[data-center]');
     const spanEl = document.querySelector('.centerspan');
     createHandler('updateText', e => {
@@ -37,11 +37,11 @@
   </script>
 </head>
 
-<body data-container="width:1040">
+<body data-container="width:sm">
 
   <header>
     <h1>Layouts - Center</h1>
-    <div data-cluster="gap:1" style="margin-block-start: 1rem;">
+    <div data-cluster="gap:sm" style="margin-block-start: 1rem;">
       <p><a href="../index.html">Elements</a></p>
       <p><a href="./container.html">Container</a></p>
       <p><a href="./stack.html">Stack</a></p>
@@ -58,7 +58,7 @@
 
   <section>
     <h3>Demo:</h3>
-    <div data-center="center:children center:text" data-stack="gap:1">
+    <div data-center="center:children center:text" data-stack="gap:sm">
       <h2>Quisimos aprender la despedida</h2>
       <p>y rompimos la alianza</p>
       <p>que juntaba al amigo con la amiga.</p>
@@ -75,7 +75,7 @@
 
     <h3>Code:</h3>
     <pre>
-      &#x3C;div data-center=&#x22;<span class="centerspan">center:children center:text</span>&#x22; data-stack=&#x22;gap:1&#x22;&#x3E;
+      &#x3C;div data-center=&#x22;<span class="centerspan">center:children center:text</span>&#x22; data-stack=&#x22;gap:sm&#x22;&#x3E;
         &#x3C;h2&#x3E;Quisimos aprender la despedida&#x3C;/h2&#x3E;
         &#x3C;p&#x3E;y rompimos la alianza&#x3C;/p&#x3E;
         &#x3C;p&#x3E;que juntaba al amigo con la amiga.&#x3C;/p&#x3E;
@@ -92,7 +92,7 @@
 
   <hr>
 
-  <div data-stack="gap:1">
+  <div data-stack="gap:sm">
     <label for="text">
       <h3>Edit:</h3>
     </label>
