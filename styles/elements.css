@@ -108,6 +108,11 @@ input[type="button"] {
   border-radius: 4px;
   cursor: pointer;
 }
+input:disabled,
+button:disabled, button[disabled] {
+  opacity: .75;
+  cursor: not-allowed;
+}
 
 /* Lists */
 ol, ul {
