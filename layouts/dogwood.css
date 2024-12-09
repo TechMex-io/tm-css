@@ -51,8 +51,8 @@ nav {
 }
 
 .values {
-  padding: 5rem;
-  padding-block: 25vh;
+  padding: 5vw;
+  padding-block: 25vw;
 }
 h3 { font-size: 3rem; font-weight: 200;}
 sl-details::part(base)  {
