@@ -9,10 +9,9 @@
   align-items: var(--stack-align);
 }
 
-[data-stack~="gap:0"] { --stack-gap: 0; }
-[data-stack~="gap:1"] { --stack-gap: clamp(1.5vw, 2vw, 1rem); }
-[data-stack~="gap:2"] { --stack-gap: clamp(2vw, 4vw, 2rem); }
-[data-stack~="gap:3"] { --stack-gap: clamp(3vw, 6vw, 3rem); }
+[data-stack~="gap:sm"] { --stack-gap: var(--layout-stack-gap-sm); }
+[data-stack~="gap:md"] { --stack-gap: var(--layout-stack-gap-md); }
+[data-stack~="gap:lg"] { --stack-gap: var(--layout-stack-gap-lg); }
 
 [data-stack~="align:start"] { --stack-align: flex-start; }
 [data-stack~="align:center"] { --stack-align: center; }

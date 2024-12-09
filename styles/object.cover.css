@@ -32,9 +32,9 @@
   in the available vertical space */
   margin-block: auto;
 }
-[data-cover~="padding:1"] { --cover-padding: 1rem; }
-[data-cover~="padding:2"] { --cover-padding: 2rem; }
-[data-cover~="padding:3"] { --cover-padding: 3rem; }
+[data-cover~="padding:sm"] { --cover-padding: var(--layout-cover-padding-sm); }
+[data-cover~="padding:md"] { --cover-padding: var(--layout-cover-padding-md); }
+[data-cover~="padding:lg"] { --cover-padding: var(--layout-cover-padding-lg); }
 
 [data-cover~="height:25"] { --block-size: 25vh; }
 [data-cover~="height:50"] { --block-size: 50vh; }
