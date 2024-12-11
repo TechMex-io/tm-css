@@ -44,14 +44,14 @@
   --layout-container-padding-lg: clamp(3rem, 6vw, 9vw);
 
   /* Fluid Spacing for Stack Layouts */
-  --layout-stack-gap-sm: clamp(1.5vw, 2vw, 1rem);
-  --layout-stack-gap-md: clamp(2vw, 4vw, 2rem);
-  --layout-stack-gap-lg: clamp(3vw, 6vw, 3rem);
+  --layout-stack-gap-sm: clamp(0.75rem, 2.5vw, 1.5rem); /* Better min value for mobile */
+  --layout-stack-gap-md: clamp(1rem, 3vw, 2rem);        /* Slightly reduced min value */
+  --layout-stack-gap-lg: clamp(1.5rem, 4vw, 3rem);      /* Better max value for desktops */
 
   /* Fluid Spacing for Cluster Layouts */
-  --layout-cluster-gap-sm: clamp(1.5vw, 2vw, 1rem);
-  --layout-cluster-gap-md: clamp(2vw, 4vw, 2rem);
-  --layout-cluster-gap-lg: clamp(3vw, 6vw, 3rem);
+  --layout-cluster-gap-sm: clamp(0.75rem, 2.5vw, 1.5rem);
+  --layout-cluster-gap-md: clamp(1rem, 3vw, 2rem);
+  --layout-cluster-gap-lg: clamp(1.5rem, 4vw, 3rem);
 
   --layout-cluster-padding-sm: clamp(1rem, 2vw, 3vw);
   --layout-cluster-padding-md: clamp(2rem, 4vw, 6vw);
@@ -64,14 +64,14 @@
   --layout-collapse-lg: 60rem; /* 960px */
 
   /* Fluid Spacing for Split Layouts */
-  --layout-split-gap-sm: clamp(1.5vw, 2vw, 1rem);
-  --layout-split-gap-md: clamp(2vw, 4vw, 2rem);
-  --layout-split-gap-lg: clamp(3vw, 6vw, 3rem);
+  --layout-split-gap-sm: clamp(1rem, 3vw, 1.5rem); /* Ensure minimum is usable on mobile */
+  --layout-split-gap-md: clamp(1.5rem, 4vw, 2.5rem); /* Adjusted for medium balance */
+  --layout-split-gap-lg: clamp(2rem, 5vw, 4rem);    /* Generous gap for large layouts */
 
   /* Spacing for Switcher Layout */
-  --layout-switcher-gap-sm: clamp(1.5vw, 2vw, 1rem);
-  --layout-switcher-gap-md: clamp(2vw, 4vw, 2rem);
-  --layout-switcher-gap-lg: clamp(3vw, 6vw, 3rem);
+  --layout-switcher-gap-sm: clamp(1rem, 3vw, 1.5rem);
+  --layout-switcher-gap-md: clamp(1.5rem, 4vw, 2.5rem);
+  --layout-switcher-gap-lg: clamp(2rem, 5vw, 4rem);
 
   /* Spacing for Cover Layouts */
   --layout-cover-padding-sm: clamp(1rem, 2vw, 3vw);
