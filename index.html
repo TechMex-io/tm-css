@@ -148,12 +148,10 @@ goto first step (or shut off burner when done)</pre>
     <p>A horizontal rule follows.</p>
     <hr>
     <p>Images are responsive by default:</p>
-    <div>
-      <figure>
-        <img alt="example image" src="./mixyt2.png" title="An exemplary image">
-        <figcaption>example image</figcaption>
-      </figure>
-    </div>
+    <figure>
+      <img alt="example image" src="./mixyt2.png" title="An exemplary image">
+      <figcaption>example image</figcaption>
+    </figure>
     <hr>
     <h2 id="form-elements">Form Elements</h2>
     <form>
@@ -161,65 +159,69 @@ goto first step (or shut off burner when done)</pre>
         <h3>Input fields</h3>
         <label for="input__text" data-stack="gap:sm">
           Text Input (stacked)
-          <input id="input__text" placeholder="Text Input" type="text">
+          <input id="input__text" placeholder="Text Input" type="text" autocomplete="username">
         </label>
-        <label for="input__text--inline" data-cluster="gap:sm align:center">
-          Text Input (inline)
-          <input id="input__text--inline" placeholder="Text Input" type="text">
+        <label for="input__text--inline" data-split="gap:sm align:center">
+          Text Input (split - inline)
+          <input id="input__text--inline" placeholder="Text Input" type="text" autocomplete="username">
         </label>
-        <p>
-          <label for="input__password">Password</label>
-          <input id="input__password" placeholder="Type your Password" type="password">
-        </p>
+        <label for="input__password" data-cluster="gap:sm align:center">
+          Password (inline - cluster)
+          <input id="input__password" placeholder="Type your Password" type="password" autocomplete="current-password">
+        </label>
         <p>
           <label for="input__webaddress">Web Address</label>
-          <input id="input__webaddress" placeholder="http://yoursite.com" type="url">
+          <input id="input__webaddress" placeholder="http://yoursite.com" type="url" autocomplete="webaddress">
         </p>
         <p>
           <label for="input__emailaddress">Email Address</label>
-          <input id="input__emailaddress" placeholder="name@email.com" type="email">
+          <input id="input__emailaddress" placeholder="name@email.com" type="email" autocomplete="email">
         </p>
         <p>
           <label for="input__phone">Phone Number</label>
-          <input id="input__phone" placeholder="(999) 999-9999" type="tel">
+          <input id="input__phone" placeholder="(999) 999-9999" type="tel" autocomplete="tel">
         </p>
         <p>
           <label for="input__search">Search</label>
-          <input id="input__search" placeholder="Enter Search Term" type="search">
+          <input id="input__search" placeholder="Enter Search Term" type="search" autocomplete="search">
         </p>
         <p>
           <label for="input__text2">Number Input</label>
-          <input id="input__text2" placeholder="Enter a Number" type="number">
+          <input id="input__text2" placeholder="Enter a Number" type="number" autocomplete="number">
         </p>
         <p>
           <label for="input__text3">Error</label>
-          <input id="input__text3" placeholder="Text Input" type="text">
+          <input id="input__text3" placeholder="Text Input" type="text" autocomplete="username">
         </p>
         <p>
           <label for="input__text4">Valid</label>
-          <input id="input__text4" placeholder="Text Input" type="text">
+          <input id="input__text4" placeholder="Text Input" type="text" autocomplete="username">
         </p>
         <p>
           <label for="input__text5">Disabled</label>
-          <input id="input__text5" placeholder="Text Input" type="text" disabled>
+          <input id="input__text5" placeholder="Text Input" type="text" disabled autocomplete="username">
         </p>
         <p><a href="#top">[Top]</a></p>
-        <label for="select" data-stack="gap:sm">
-          <h3>Select menus</h3>
-          <select id="select">
-            <optgroup label="Option Group">
-              <option>Option One</option>
-              <option>Option Two</option>
-              <option>Option Three</option>
-            </optgroup>
-          </select>
-        </label>
-        <p><a href="#top">[Top]</a></p>
+
+
 
 
 
 
         <div data-switcher="gap:md">
+          <div class="select" data-stack="gap:sm">
+            <label for="select">
+              <h3>Select menus</h3>
+            </label>
+            <select id="select">
+              <optgroup label="Option Group">
+                <option>Option One</option>
+                <option>Option Two</option>
+                <option>Option Three</option>
+              </optgroup>
+            </select>
+          </div>
+
           <div data-stack="gap:sm">
             <h3>Checkboxes</h3>
             <label for="checkbox1"><input checked="checked" id="checkbox1" name="checkbox" type="checkbox"> Choice
@@ -264,100 +266,6 @@ goto first step (or shut off burner when done)</pre>
       </ol>
     </div>
   </div>
-  <!--
-         <header>
-           <h1>Elements</h1>
-
-           <p data-cluster="gap:sm" style="margin-block-start: 2rem;">
-             <a href="./">Elements</a>
-             <a href="./layouts.html">Layouts</a>
-           </p>
-         </header>
-
-         <p>This css takes advantage of semantic HTML elements. Here are some guidelines on how these should be used for the
-           best results.</p>
-
-
-
-         <h2>Body</h2>
-
-         <p>
-           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, sed beatae tempore est minima repellendus consectetur
-           quaerat inventore quas asperiores veniam doloribus explicabo natus cum nesciunt perspiciatis deleniti odit?
-           Repellat?
-         </p>
-
-
-         <h2>Buttons</h2>
-
-         <p>For a link button, wrap the button in an <code>&lt;a&gt;</code> tag. For example-</p>
-
-         <pre>
-         &lt;a href=&quot;https://example.com&quot;&gt;
-         &lt;button&gt;Click me!&lt;/button&gt;
-         &lt;/a&gt;</pre>
-
-
-         <h2>Code</h2>
-
-         <p>Use <code>&lt;code&gt;</code> for short inline code.</p>
-
-         <p>Use <code>&lt;pre&gt;</code> for code blocks.</p>
-
-         <blockquote>These two shouldn't be nested, but if they are, the child element will clear it's own style and match the
-           parent.</blockquote>
-
-         <p>Use <code>&lt;kbd&gt;</code> for keyboard input. For example, <kbd>ALT + F4</kbd></p>
-
-
-         <h2>Details</h2>
-
-         <p>The <code>&lt;details&gt;</code> element can make a toggle-able dropdown without any JavaScript. Here's an example-
-         </p>
-
-         <details>
-           <summary>Click me!</summary>
-           <p>Lorem ipsum dolor sit amet.</p>
-         </details>
-
-         <p>Here's the code-</p>
-
-         <pre>
-         &lt;details&gt;
-         &lt;summary&gt;Click me!&lt;/summary&gt;
-         &lt;p&gt;Lorem ipsum dolor sit amet.&lt;/p&gt;
-         &lt;/details&gt;
-         </pre>
-
-
-         <h2>Text</h2>
-
-         <p>Wrap all body text in <code>&lt;p&gt;</code> tags, unless it's the sole child of another element. Here are
-           examples-</p>
-
-         <pre>
-         &lt;blockquote&gt;
-         Hello, world!
-         &lt;/blockquote&gt;
-         </pre>
-
-         <pre>
-         &lt;blockquote&gt;
-         &lt;p&gt;Hello, world!&lt;/p&gt;
-         &lt;button&gt;Click me!&lt;/button&gt;
-         &lt;/blockquote&gt;
-         </pre>
-
-         <pre>
-         &lt;ul&gt;
-         &lt;li&gt;Hello, world!&lt;/li&gt;
-         &lt;li&gt;
-         &lt;p&gt;Line 1&lt;/p&gt;
-         &lt;img src=&quot;https://example.com/image.png&quot;&gt;
-         &lt;/li&gt;
-         &lt;/ul&gt;
-         </pre>
-         -->
 </body>
 
 </html>

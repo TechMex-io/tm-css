@@ -149,10 +149,11 @@ img {
   inline-size: 100%;
   max-inline-size: 100%;
 }
-/* Remove spacing around images inside a figure */
-figure:has(img) {
-  line-height: 0;
+/* Remove `figure` spacing below images */
+figure img {
+  vertical-align: bottom;
 }
+
 
 /* Monospace elements */
 code,
