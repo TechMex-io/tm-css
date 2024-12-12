@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="CSS Stuffs">
+  <title>Layouts</title>
+
+  <link rel="stylesheet" href="../dist/styles.min.css">
+  <style>
+    [data-cluster] {
+      background-color: hsl(0 0% 100% / .35);
+      min-block-size: 4rem;
+    }
+
+    section {
+      /* background-color: lightblue;
+      padding: 2rem; */
+      margin-block-start: 3rem;
+
+      >*+* {
+        margin-block-start: 2rem;
+      }
+    }
+  </style>
+  <script type="module">
+    import { createSignal, createHandler } from '../scripts/vivo.js'
+
+    const [text, setText] = createSignal('text', 'col-size:sm gap:sm')
+    const masonryEl = document.querySelector('[data-masonry]');
+    console.log(masonryEl)
+    const spanEl = document.querySelector('span');
+    createHandler('updateText', e => {
+      setText(e.target.value.trim());
+      masonryEl.setAttribute('data-masonry', text());
+      spanEl.textContent = text();
+    })
+  </script>
+</head>
+
+<body data-container="width:sm">
+
+  <header>
+    <h1>Layouts - Masonry</h1>
+    <div data-cluster="gap:sm" style="margin-block-start: 1rem;">
+      <p><a href="../index.html">Elements</a></p>
+      <p><a href="./container.html">Container</a></p>
+      <p><a href="./stack.html">Stack</a></p>
+      <p><a href="./cluster.html">Cluster</a></p>
+      <p><a href="./split.html">Split</a></p>
+      <p><a href="./switcher.html">Switcher</a></p>
+      <p><a href="./cover.html">Cover</a></p>
+      <p><a href="./center.html">Center</a></p>
+      <p><a href="./masonry.html">Masonry</a></p>
+
+    </div>
+  </header>
+
+
+  <section>
+    <h3>Demo:</h3>
+
+    <div data-masonry="col-size:sm gap:sm">
+      <figure>
+        <img src="https://picsum.photos/200/300" alt="">
+      </figure>
+      <figure>
+        <img src="https://picsum.photos/600/300" alt="">
+      </figure>
+      <figure>
+        <img src="https://picsum.photos/400/300" alt="">
+      </figure>
+      <figure>
+        <img src="https://picsum.photos/500/300" alt="">
+      </figure>
+      <figure>
+        <img src="https://picsum.photos/300/300" alt="">
+      </figure>
+      <figure>
+        <img src="https://picsum.photos/200/600" alt="">
+      </figure>
+      <figure>
+        <img src="https://picsum.photos/600/900" alt="">
+      </figure>
+      <figure>
+        <img src="https://picsum.photos/400/300" alt="">
+      </figure>
+      <figure>
+        <img src="https://picsum.photos/500/800" alt="">
+      </figure>
+      <figure>
+        <img src="https://picsum.photos/300/500" alt="">
+      </figure>
+    </div>
+  </section>
+
+
+  <section>
+    <label for="text" data-stack="gap:sm">
+      <h3>Edit:</h3>
+      <input type="text" name="text" id="text" value="col-size:sm gap:sm" data-vivo="input:updateText" />
+    </label>
+  </section>
+
+  <section>
+    <h3>Code:</h3>
+    <pre>
+      &lt;div data-masonry=&quot;<span>col-size:sm gap:sm</span>&quot;&gt;
+        &lt;figure&gt;
+          &lt;img src=&quot;https://picsum.photos/200/300&quot; alt=&quot;&quot;&gt;
+        &lt;/figure&gt;
+        &lt;figure&gt;
+          &lt;img src=&quot;https://picsum.photos/600/300&quot; alt=&quot;&quot;&gt;
+        &lt;/figure&gt;
+        &lt;figure&gt;
+          &lt;img src=&quot;https://picsum.photos/400/300&quot; alt=&quot;&quot;&gt;
+        &lt;/figure&gt;
+      &lt;/div&gt;
+      </pre>
+
+
+    <h3>API:</h3>
+    <small data-stack>
+      <pre>col-size:[sm, md, lg]<br>gap:[sm, md, lg]<br>num-cols:[2, 3, 4, 5, 6]<br><br>note: `num-cols` will override `col-size`</pre>
+    </small>
+  </section>
+
+
+
+
+
+  <script type="module" src="../scripts/vivo.js"></script>
+</body>
+
+</html>

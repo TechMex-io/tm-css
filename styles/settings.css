@@ -9,6 +9,9 @@
 	--font--serif: Georgia, 'Times New Roman', Times, serif;
 	--font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
 	--font-mono: Consolas, monaco, 'Ubuntu Mono', 'Liberation Mono', 'Courier New', Courier, monospace;
+  --default-headline-font-weight: 300;
+  --default-font-weight: 400;
+
 
   /*
     Fluid typography
@@ -53,10 +56,15 @@
   --layout-cluster-gap-md: clamp(1rem, 3vw, 2rem);
   --layout-cluster-gap-lg: clamp(1.5rem, 4vw, 3rem);
 
+  /* Fluid Spacing for Cluster Layouts */
   --layout-cluster-padding-sm: clamp(1rem, 2vw, 3vw);
   --layout-cluster-padding-md: clamp(2rem, 4vw, 6vw);
   --layout-cluster-padding-lg: clamp(3rem, 6vw, 9vw);
 
+  /* Fluid Spacing for Masonry Layouts */
+  --layout-masonry-gap-sm: clamp(0.75rem, 2.5vw + .5rem, 1.75vw); /* Better min value for mobile */
+  --layout-masonry-gap-md: clamp(1rem, 3vw, 2vw);        /* Slightly reduced min value */
+  --layout-masonry-gap-lg: clamp(1.5rem, 4vw, 3vw);      /* Better max value for desktops */
 
   /* Breakpoints for Layouts */
   --layout-collapse-sm: 25rem; /* 400px */

@@ -50,6 +50,7 @@
       <p><a href="./switcher.html">Switcher</a></p>
       <p><a href="./cover.html">Cover</a></p>
       <p><a href="./center.html">Center</a></p>
+      <p><a href="./masonry.html">Masonry</a></p>
 
     </div>
   </header>
@@ -73,6 +74,13 @@
 
     <hr>
 
+    <label for="text" data-stack="gap:sm">
+      <h3>Edit:</h3>
+      <input type="text" id="text" data-vivo="input:updateText" value="center:children center:text" />
+    </label>
+
+    <hr>
+
     <h3>Code:</h3>
     <pre>
       &#x3C;div data-center=&#x22;<span class="centerspan">center:children center:text</span>&#x22; data-stack=&#x22;gap:sm&#x22;&#x3E;
@@ -93,13 +101,6 @@
   <hr>
 
   <div data-stack="gap:sm">
-    <label for="text">
-      <h3>Edit:</h3>
-    </label>
-    <input type="text" id="text" data-vivo="input:updateText" value="center:children center:text" />
-
-    <hr>
-
     <h3>API:</h3>
     <small data-stack>
       <pre>center:[children, text]</pre>

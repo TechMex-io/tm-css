@@ -24,6 +24,16 @@
         margin-block-start: 2rem;
       }
     }
+
+    .avatar>* {
+      border: 1px solid #ddd;
+      padding: .15rem;
+      border-radius: 999rem;
+      inline-size: 4rem;
+      block-size: 4rem;
+      overflow: hidden;
+      aspect-ratio: 1;
+    }
   </style>
   <script type="module">
     import { createSignal, createHandler } from '../scripts/vivo.js'
@@ -61,13 +71,38 @@
 
   <section>
     <h3>Demo:</h3>
-    <form data-split="3/4 gap:sm collapse:sm align:end">
-      <label for="email" data-stack="gap:sm">
-        Email Adress
-        <input type="text" name="email" id="email" />
-      </label>
-      <button>Subscribe</button>
-    </form>
+    <div data-split="media spacing:sm gap:sm collapse:sm align:start">
+      <figure class="avatar">
+        <img src="https://picsum.photos/200/300" alt="">
+      </figure>
+      <div>
+        <p><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae voluptatibus voluptas distinctio
+            voluptates qui eligendi ipsam eos. Quas delectus explicabo dicta dolor laboriosam? Dolores suscipit
+            accusamus illo rem ipsa reiciendis?</span><span>Assumenda eos dolorem sequi fuga quasi nemo, quis optio?
+            Nam, quae? Architecto ipsa ut veritatis, laudantium adipisci inventore officia possimus voluptas mollitia
+            rerum pariatur dicta recusandae numquam, fuga aperiam voluptates.</span><span>Repellat in temporibus dolorem
+            vero sequi qui cum, quia recusandae! Tempora rem rerum, eaque temporibus quia voluptate sapiente nihil
+            molestiae recusandae, deserunt dolor asperiores mollitia accusantium voluptatum, dolores earum fuga!</span>
+        </p>
+        <div data-split="media gap:sm collapse:sm align:start">
+          <figure class="avatar">
+            <img src="https://picsum.photos/200/300" alt="">
+          </figure>
+          <div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.</p>
+            <div data-split="media gap:sm collapse:sm align:start">
+              <figure class="avatar">
+                <img src="https://picsum.photos/200/300" alt="">
+              </figure>
+              <div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
 
     <hr>
 
