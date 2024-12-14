@@ -1,0 +1,43 @@
+# .github/workflows/sync-dist.yml
+name: Sync Distribution
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'styles/**'
+      - 'scripts/**'
+      - 'package.json'
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v2
+        with:
+          path: source
+
+      - name: Checkout dist repo
+        uses: actions/checkout@v2
+        with:
+          repository: TechMex-io/elemental
+          path: dist
+          token: ${{ secrets.DIST_REPO_PAT }}
+
+      - name: Sync files
+        run: |
+          cd source
+          cp -r styles/ ../dist/
+          cp -r scripts/ ../dist/
+          cp package.json ../dist/
+
+      - name: Commit and push
+        run: |
+          cd dist
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add .
+          git commit -m "Sync from main repository" || echo "No changes to commit"
+          git push
