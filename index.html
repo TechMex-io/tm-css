@@ -9,11 +9,12 @@
   <title>Elements</title>
   <link rel="stylesheet" href="/tm-css/elemental/dist/styles.min.css">
   <link rel="stylesheet" href="/tm-css/demo/docs.css">
-  <script type="module" src="/tm-css/scripts/index.js"></script>
+  <script type="module" src="/tm-css/scripts/app.js"></script>
   <base href="/tm-css/tm-css" />
 </head>
 
-<body data-container="width:sm padding:sm">
+<body data-container="width:sm padding:sm" class="page-">
+  <img src="./img/elemental.svg" alt="" class="elemental-oranament">
 
 <style>
   body {
@@ -25,6 +26,25 @@
     margin-inline-end: auto;
   }
 </style>
+
+<label for="disable-rings" class="disable-rings-label" data-stack>
+  <small>Disable rings</small>
+  <input type="checkbox" name="disable-rings" id="disable-rings">
+</label>
+<div class="ring-container">
+  <div class="ring"></div>
+  <div class="ring"></div>
+  <div class="ring"></div>
+  <div class="ring"></div>
+</div>
+<div class="ring-container">
+  <div class="ring"></div>
+  <div class="ring"></div>
+  <div class="ring"></div>
+  <div class="ring"></div>
+</div>
+
+
 
 
 <div data-cover="height:100 center:text">
@@ -49,6 +69,8 @@
   -->
 
 </nav>
+
+
 
 
     <figure>

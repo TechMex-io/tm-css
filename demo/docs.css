@@ -7,6 +7,99 @@ nav {
 }
 .tm-link { text-decoration: none;}
 
+
+body:has(#disable-rings:checked) .ring {
+  animation: none;
+}
+
+.ring-container {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  /* left: 1%;
+  top: 9%; */
+  left: 50%;
+  top: 50%;
+  z-index: -1;
+}
+
+.ring-container + .ring-container {
+  left: -50%;
+  top: 50%;
+}
+
+.ring {
+  --border-color: rgb(23 65 63 / 50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+  animation: pulse 4s linear infinite;
+}
+
+.elemental-oranament {
+  position: fixed;
+  top: 2%;
+  z-index: -1;
+  transform: rotate(45deg);
+  left: 75%;
+  inline-size: 35rem;
+}
+.page- .elemental-oranament{
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .disable-rings-label {
+    /* display: none; */
+  }
+
+  .ring {
+    /* animation: none; */
+  }
+}
+
+.ring:nth-child(2) {
+  animation-delay: -1s;
+}
+
+.ring:nth-child(3) {
+  animation-delay: -2s;
+}
+
+.ring:nth-child(4) {
+  animation-delay: -3s;
+}
+
+@keyframes pulse {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 1;
+    --border-color: green;
+  }
+
+  100% {
+    width: 50vw;
+    height: 50vw;
+    opacity: 0;
+    --border-color: salmon;
+  }
+}
+
+.disable-rings-label {
+  cursor: pointer;
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  background-color: white;
+  padding: .85rem;
+}
+
+
+
 .avatar {
   border-radius: 50%;
   inline-size: 5rem;
