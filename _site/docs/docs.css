@@ -1,0 +1,22 @@
+.avatar {
+  border-radius: 50%;
+  width: 60px;
+}
+
+[data-cover-main][data-center] {
+  margin-inline: unset;
+
+  h1 {
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  p:first-of-type {
+    letter-spacing: 16px;
+    margin-block-start: .5rem;
+  }
+
+  p:last-of-type {
+    padding-block: 1rem;
+  }
+}
