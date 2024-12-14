@@ -1,0 +1,3 @@
+[submodule "elemental"]
+	path = elemental
+	url = git@github.com:TechMex-io/elemental.git
