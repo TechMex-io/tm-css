@@ -7,7 +7,7 @@
     "el": "npx eleventy",
     "el:serve": "npx eleventy --serve",
     "update": "./update-repos.sh",
-     "deploy": "eleventy && gh-pages -d _site"
+     "deploy": "npx eleventy && gh-pages -d _site"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",
