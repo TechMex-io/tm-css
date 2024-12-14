@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="CSS Stuffs">
+  <title>Elements</title>
+  <link rel="stylesheet" href="./dist/styles.min.css">
+  <script type="module" src="./scripts/index.js"></script>
+  <script type="module"
+    src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.19.1/cdn/shoelace-autoloader.js"></script>
+  <style>
+    .avatar {
+      border-radius: 50%;
+      width: 60px;
+    }
+
+    [data-cover-main][data-center] {
+      margin-inline: unset;
+
+      h1 {
+        letter-spacing: 2px;
+        text-transform: uppercase;
+      }
+
+      p:first-of-type {
+        letter-spacing: 16px;
+        margin-block-start: .5rem;
+      }
+
+      p:last-of-type {
+        padding-block: 1rem;
+      }
+    }
+  </style>
+</head>
+
+<body data-container="width:sm padding:sm">
+
+  <div data-cover="height:100 center:text">
+    <div data-cover-main data-center="center:text">
+      <h1>Elemental</h1>
+      <p>CSS Layouts by <a href="https://tech-mex.io">Tech-Mex.io</a></p>
+      <!-- include: ./nav.html -->
+
+      <p data-cluster="gap:sm justify:center">
+        <a href="./elements.html">Elements</a>
+        <a href="./layouts.html">Layouts</a>
+      </p>
+      <figure>
+        <img src="./img/elemental.svg" alt="">
+      </figure>
+
+    </div>
+  </div>
+</body>
+
+</html>

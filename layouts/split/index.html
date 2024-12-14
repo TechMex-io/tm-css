@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="CSS Stuffs">
+  <title>Elements</title>
+  <link rel="stylesheet" href="/elemental/dist/styles.min.css">
+  <link rel="stylesheet" href="/demo/docs.css">
+  <script type="module" src="/scripts/index.js"></script>
+</head>
+
+<body data-container="width:sm padding:sm">
+
+
+<header>
+  <h1>Layouts - Split</h1>
+  <nav data-cluster="gap:md align:center">
+  <a href="/">Home</a>
+  <a href="/elements">Elements</a>
+  <a href="/layouts/container">Container</a>
+  <a href="/layouts/stack">Stack</a>
+  <a href="/layouts/cluster">Cluster</a>
+  <a href="/layouts/split">Split</a>
+  <a href="/layouts/switcher">Switcher</a>
+  <a href="/layouts/cover">Cover</a>
+  <a href="/layouts/center">Center</a>
+  <a href="/layouts/masonry">Masonry</a>
+  <a href="/layouts/media-object">Media Object</a>
+  <!--
+  <a href="/layouts/grid.html">Grid</a>
+  <a href="/layouts/row.html">Row</a>
+  -->
+
+</nav>
+
+</header>
+
+
+<section>
+  <h3>Demo:</h3>
+  <form class="split-demo" data-split="3/4 gap:sm collapse:sm align:end">
+    <label for="email" data-stack="gap:sm">
+      Email Adress
+      <input type="text" name="email" id="email" />
+    </label>
+    <button>Subscribe</button>
+  </form>
+
+  <hr>
+
+  <label for="text" data-stack="gap:sm">
+    <h3>Edit:</h3>
+    <input type="text" id="text" data-vivo="input:updateText" value="3/4 gap:sm collapse:sm align:end" />
+  </label>
+
+  <hr>
+
+
+  <h3>Code:</h3>
+  <pre>
+      &#x3C;form data-split=&#x22;<span>3/4 gap:sm collapse:sm align:end</span>&#x22;&#x3E;
+        &#x3C;label for=&#x22;email&#x22; data-stack=&#x22;gap:sm&#x22;&#x3E;
+          Email Adress
+          &#x3C;input type=&#x22;text&#x22; name=&#x22;email&#x22; id=&#x22;email&#x22; /&#x3E;
+        &#x3C;/label&#x3E;
+        &#x3C;button&#x3E;Subscribe&#x3C;/button&#x3E;
+      &#x3C;/form&#x3E;
+    </pre>
+
+  <hr>
+
+
+  <h3>API:</h3>
+  <pre>
+[1/4, 1/3, 3/4, 2/3]
+collapse:[sm, md, lg]
+align:[start, end, between, around]
+gap:[sm, md, lg]
+  </pre>
+
+</section>
+
+
+
+</body>
+
+</html>
+
