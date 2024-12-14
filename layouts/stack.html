@@ -1,78 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
+{% include "head.html" %}
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="description" content="CSS Stuffs">
-  <title>Layouts</title>
-
-  <link rel="stylesheet" href="../dist/styles.min.css">
-  <style>
-    p {
-      margin-block-end: 1.25rem;
-    }
-
-    section {
-      margin-block-start: 3rem;
-    }
-
-    input,
-    textarea {
-      padding: .5rem;
-    }
-
-    hr {
-      margin-block: 3rem;
-    }
-  </style>
-</head>
-
-<body data-container="width:sm">
-
-  <header>
-    <h1>Layouts - Stack</h1>
-    <div data-cluster="gap:sm" style="margin-block-start: 1rem;">
-      <p><a href="../index.html">Elements</a></p>
-      <p><a href="./container.html">Container</a></p>
-      <p><a href="./stack.html">Stack</a></p>
-      <p><a href="./cluster.html">Cluster</a></p>
-      <p><a href="./split.html">Split</a></p>
-      <p><a href="./switcher.html">Switcher</a></p>
-      <p><a href="./cover.html">Cover</a></p>
-      <p><a href="./center.html">Center</a></p>
-      <p><a href="./masonry.html">Masonry</a></p>
-
-    </div>
-  </header>
+<header>
+  <h1>Layouts - Stack</h1>
+  {% include "nav.html" %}
+</header>
 
 
-  <section data-stack="gap:md" data-container="width:sm padding:sm">
-    <h3>Demo:</h3>
-    <form data-stack="gap:md">
-      <label for="name" data-stack="gap:sm">
-        Name
-        <input type="text" id="name" name="name">
-      </label>
+<section data-stack="gap:md" data-container="width:sm padding:sm">
+  <h3>Demo:</h3>
+  <form data-stack="gap:md">
+    <label for="name" data-stack="gap:sm">
+      Name
+      <input type="text" id="name" name="name">
+    </label>
 
-      <label for="email" data-stack="gap:sm">
-        Email
-        <input type="email" id="email" name="email">
-      </label>
+    <label for="email" data-stack="gap:sm">
+      Email
+      <input type="email" id="email" name="email">
+    </label>
 
-      <label for="message" data-stack="gap:sm">
-        Message
-        <textarea id="message" name="message"></textarea>
-      </label>
+    <label for="message" data-stack="gap:sm">
+      Message
+      <textarea id="message" name="message"></textarea>
+    </label>
 
-      <button type="submit">Submit</button>
-    </form>
+    <button type="submit">Submit</button>
+  </form>
 
-    <hr>
+  <hr>
 
-    <h3>Code:</h3>
-    <pre>
+  <h3>Code:</h3>
+  <pre>
 &#x3C;form data-stack=&#x22;gap:md&#x22;&#x3E;
   &#x3C;label for=&#x22;name&#x22; data-stack=&#x22;gap:sm&#x22;&#x3E;
     Name
@@ -93,6 +51,6 @@
 &#x3C;/form&#x3E;
     </pre>
 
-</body>
+</section>
 
-</html>
+{% include "foot.html" %}

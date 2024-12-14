@@ -11,9 +11,9 @@ A simple CSS framework for Tech-Mex projects
 
 ### Install
 
-In your Processwire site, 
+In your Processwire site,
 
-- `cd` into `/site/templates` 
+- `cd` into `/site/templates`
 - `rm -rf styles scripts`
 - `git clone git@github.com:TechMex-io/tm-css.git `
 - `mv tm-css/styles ./`
@@ -21,7 +21,7 @@ In your Processwire site,
 - `mv tm-css/package.json ./`
 - `pnpm i`
 - `rm -rf tm-css/`
-- update your template files with the paths to `dist/styles.min.js` and `dist/bundle.min.js` 
+- update your template files with the paths to `dist/styles.min.js` and `dist/bundle.min.js`
 
 ### CSS
 
@@ -58,4 +58,5 @@ this is where you set up your custom css properties. there are some properties a
 - [ ] Add detailed documentation
   - [ ] for layouts
   - [ ] for use in processwire projects
-- [ ] Update demos UI
+- [x] Update demos UI
+- [ ] PHP script to delete unnecessary files for a new processwire site

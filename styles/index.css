@@ -2,7 +2,8 @@
 /*
 add vendor css in the appropriate layer
 @shoealce is added as a dev dependency should you want to use it
-@import url('@shoelace-style/shoelace/dist/themes/light.css') layer(vendor); */
+*/
+@import url('@shoelace-style/shoelace/dist/themes/light.css') layer(vendor);
 @import url('./settings.css') layer(settings);
 /*
 Reset based on Josh Comeau’s [CSS Reset](https://www.joshwcomeau.com/css/custom-css-reset/)

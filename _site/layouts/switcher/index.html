@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="CSS Stuffs">
+  <title>Elements</title>
+  <link rel="stylesheet" href="/dist/styles.min.css">
+  <link rel="stylesheet" href="/demo/docs.css">
+  <script type="module" src="/scripts/index.js"></script>
+</head>
+
+<body data-container="width:sm padding:sm">
+
+
+<header>
+  <h1>Layouts - Switcher</h1>
+  <nav data-cluster="gap:md">
+  <a href="/">Home</a>
+  <a href="/elements">Elements</a>
+  <a href="/layouts/container">Container</a>
+  <a href="/layouts/stack">Stack</a>
+  <a href="/layouts/cluster">Cluster</a>
+  <a href="/layouts/split">Split</a>
+  <a href="/layouts/switcher">Switcher</a>
+  <a href="/layouts/cover">Cover</a>
+  <a href="/layouts/center">Center</a>
+  <!--
+  <a href="/layouts/grid.html">Grid</a>
+  <a href="/layouts/row.html">Row</a>
+  -->
+
+</nav>
+
+</header>
+
+
+
+<section>
+  <h3>Demo:</h3>
+  <div data-switcher="gap:sm collapse:lg" class="switcher-demo">
+    <div>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit deleniti sed eius, at cupiditate
+        repudiandae rem dicta error unde. Aliquam doloremque temporibus amet nam quas, sequi dolore rerum
+        repellendus
+        blanditiis?</p>
+    </div>
+    <div>
+      <p>Accusamus vel totam ipsa magni sunt, magnam dolore eum necessitatibus modi et odio ratione, distinctio
+        maxime
+        officia aut porro? At atque assumenda provident deleniti suscipit ratione distinctio accusantium error
+        doloribus!</p>
+    </div>
+    <div>
+      <p>Accusamus vel totam ipsa magni sunt, magnam dolore eum necessitatibus modi et odio ratione, distinctio
+        maxime
+        officia aut porro? At atque assumenda provident deleniti suscipit ratione distinctio accusantium error
+        doloribus!</p>
+    </div>
+  </div>
+
+  <hr>
+
+  <label for="text" data-stack="gap:sm">
+    <h3>Edit:</h3>
+    <input type="text" id="text" data-vivo="input:updateText" value="gap:sm collapse:lg" />
+  </label>
+
+  <hr>
+
+  <h3>Code:</h3>
+  <pre>
+      &#x3C;div data-switcher=&#x22;<span class="demospan">gap:sm collapse:lg</span>&#x22;&#x3E;&#x3C;div&#x3E;
+        &#x3C;p&#x3E;Lorem ipsum dolor sit amet consectetur adipisicing elit.
+         Reprehenderit deleniti sed eius, at cupiditate repudiandae rem dicta
+         error unde. Aliquam doloremque temporibus amet nam quas, sequi dolore
+         rerum repellendus blanditiis?&#x3C;/p&#x3E;
+      &#x3C;/div&#x3E;
+      &#x3C;div&#x3E;
+        &#x3C;p&#x3E;Accusamus vel totam ipsa magni sunt, magnam dolore eum
+         necessitatibus modi et odio ratione, distinctio maxime officia aut
+         porro? At atque assumenda provident deleniti suscipit ratione
+         distinctio accusantium error doloribus!&#x3C;/p&#x3E;
+      &#x3C;/div&#x3E;
+      &#x3C;div&#x3E;
+        &#x3C;p&#x3E;Accusamus vel totam ipsa magni sunt, magnam dolore eum
+         necessitatibus modi et odio ratione, distinctio maxime officia aut
+         porro? At atque assumenda provident deleniti suscipit ratione
+         distinctio accusantium error doloribus!&#x3C;/p&#x3E;
+      &#x3C;/div&#x3E;
+    &#x3C;/div&#x3E;
+      </pre>
+
+
+  <hr>
+
+
+
+  <hr>
+
+  <h3>API:</h3>
+  <small data-stack>
+    <pre>collapse:[sm, md, lg] (400px, 640px, 960px)<br>gap:[sm, md, lg]</pre>
+
+    these are arbitrary values and should be updated for your project's needs.
+  </small>
+
+
+</section>
+
+</body>
+
+</html>
+

@@ -9,9 +9,12 @@
     "build:js": "esbuild ./scripts/main.js --outfile=./dist/bundle.min.js --bundle --minify --sourcemap --tree-shaking=true",
     "watch:js": "esbuild ./scripts/main.js --outfile=./dist/bundle.min.js --bundle --watch",
     "build": "npm-run-all -p build:js build:css",
-    "watch": "npm-run-all -p watch:js watch:css"
+    "watch": "npm-run-all -p watch:js watch:css",
+    "el": "npx eleventy",
+    "el:serve": "npx eleventy --serve"
   },
   "devDependencies": {
+    "@11ty/eleventy": "^3.0.0",
     "@shoelace-style/shoelace": "^2.19.0",
     "autoprefixer": "^10.4.20",
     "esbuild": "^0.24.0",

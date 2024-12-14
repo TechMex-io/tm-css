@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="CSS Stuffs">
+  <title>Elements</title>
+  <link rel="stylesheet" href="/dist/styles.min.css">
+  <link rel="stylesheet" href="/demo/docs.css">
+  <script type="module" src="/scripts/index.js"></script>
+</head>
+
+<body data-container="width:sm padding:sm">
+
+
+<header>
+  <h1>Layouts - Stack</h1>
+  <nav data-cluster="gap:md">
+  <a href="/">Home</a>
+  <a href="/elements">Elements</a>
+  <a href="/layouts/container">Container</a>
+  <a href="/layouts/stack">Stack</a>
+  <a href="/layouts/cluster">Cluster</a>
+  <a href="/layouts/split">Split</a>
+  <a href="/layouts/switcher">Switcher</a>
+  <a href="/layouts/cover">Cover</a>
+  <a href="/layouts/center">Center</a>
+  <!--
+  <a href="/layouts/grid.html">Grid</a>
+  <a href="/layouts/row.html">Row</a>
+  -->
+
+</nav>
+
+</header>
+
+
+<section data-stack="gap:md" data-container="width:sm padding:sm">
+  <h3>Demo:</h3>
+  <form data-stack="gap:md">
+    <label for="name" data-stack="gap:sm">
+      Name
+      <input type="text" id="name" name="name">
+    </label>
+
+    <label for="email" data-stack="gap:sm">
+      Email
+      <input type="email" id="email" name="email">
+    </label>
+
+    <label for="message" data-stack="gap:sm">
+      Message
+      <textarea id="message" name="message"></textarea>
+    </label>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <hr>
+
+  <h3>Code:</h3>
+  <pre>
+&#x3C;form data-stack=&#x22;gap:md&#x22;&#x3E;
+  &#x3C;label for=&#x22;name&#x22; data-stack=&#x22;gap:sm&#x22;&#x3E;
+    Name
+    &#x3C;input type=&#x22;text&#x22; id=&#x22;name&#x22; name=&#x22;name&#x22;&#x3E;
+  &#x3C;/label&#x3E;
+
+  &#x3C;label for=&#x22;email&#x22; data-stack=&#x22;gap:sm&#x22;&#x3E;
+    Email
+    &#x3C;input type=&#x22;email&#x22; id=&#x22;email&#x22; name=&#x22;email&#x22;&#x3E;
+  &#x3C;/label&#x3E;
+
+  &#x3C;label for=&#x22;message&#x22; data-stack=&#x22;gap:sm&#x22;&#x3E;
+    Message
+    &#x3C;textarea id=&#x22;message&#x22; name=&#x22;message&#x22;&#x3E;&#x3C;/textarea&#x3E;
+  &#x3C;/label&#x3E;
+
+  &#x3C;button type=&#x22;submit&#x22;&#x3E;Submit&#x3C;/button&#x3E;
+&#x3C;/form&#x3E;
+    </pre>
+
+</section>
+
+</body>
+
+</html>
+

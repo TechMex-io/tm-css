@@ -1,104 +1,71 @@
-<!DOCTYPE html>
-<html lang="en">
+{% include "head.html" %}
+<style>
+  p {
+    margin-block-end: 1.25rem;
+  }
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="description" content="CSS Stuffs">
-  <title>Layouts</title>
+  section:first-of-type {
+    margin-block-start: 3rem;
+  }
 
-  <link rel="stylesheet" href="../dist/styles.min.css">
-  <style>
-    p {
-      margin-block-end: 1.25rem;
-    }
+  hr {
+    margin-block: 3rem;
+  }
 
-    [data-container]:not(.nav) {
-      border: 1px solid #ddd;
-      padding: 1rem;
-    }
+  span {
+    font-weight: bold;
+  }
+</style>
 
-    section:first-of-type {
-      margin-block-start: 3rem;
-    }
+<header>
+  <h1>Layouts - Container</h1>
+  {% include "nav.html" %}
+</header>
 
-    hr {
-      margin-block: 3rem;
-    }
+<section>
+  <div data-container="width:sm" data-stack="gap:sm" class="container">
+    <h3>Demo</h3>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum laboriosam inventore dicta accusantium
+      perspiciatis reiciendis id nesciunt? Nobis adipisci, atque qui magnam tempore debitis, quam quisquam facilis, ex
+      consequatur itaque!
+    </p>
 
-    span {
-      font-weight: bold;
-    }
-  </style>
-</head>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic illum error facilis eum officia maiores adipisci
+      sequi, ex possimus ullam a reiciendis necessitatibus tempore molestias quae, culpa quod accusamus dolorem!</p>
+  </div>
 
-<body>
-
-  <header data-container="width:sm" class="nav">
-    <h1>Layouts - Container</h1>
-    <div data-cluster="gap:sm" style="margin-block-start: 1rem;">
-      <p><a href="../index.html">Elements</a></p>
-      <p><a href="./container.html">Container</a></p>
-      <p><a href="./stack.html">Stack</a></p>
-      <p><a href="./cluster.html">Cluster</a></p>
-      <p><a href="./split.html">Split</a></p>
-      <p><a href="./switcher.html">Switcher</a></p>
-      <p><a href="./cover.html">Cover</a></p>
-      <p><a href="./center.html">Center</a></p>
-      <p><a href="./masonry.html">Masonry</a></p>
-
-    </div>
-  </header>
-
-  <section>
-    <div data-container="width:sm" data-stack="gap:sm">
-      <h3>Demo</h3>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum laboriosam inventore dicta accusantium
-        perspiciatis reiciendis id nesciunt? Nobis adipisci, atque qui magnam tempore debitis, quam quisquam facilis, ex
-        consequatur itaque!
-      </p>
-
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic illum error facilis eum officia maiores adipisci
-        sequi, ex possimus ullam a reiciendis necessitatibus tempore molestias quae, culpa quod accusamus dolorem!</p>
-    </div>
-
-    <div data-container="width:sm" data-stack="gap:sm">
-      <h3>Code</h3>
-      <pre>
+  <div data-container="width:sm" data-stack="gap:sm">
+    <h3>Code</h3>
+    <pre>
   &lt;div data-container="width:sm"&gt;
     &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, quod.&lt;/p&gt;
   &lt;/div&gt;
       </pre>
-    </div>
+  </div>
 
-  </section>
-
-
-  <hr>
+</section>
 
 
-  <section>
-    <div data-container="padding:sm" style="--container-size: 76.6875rem" data-stack="gap:sm">
-      <h3>Demo</h3>
-      <p>Custom widths can be declared by overriding the <code>--container-size</code> property of the
-        <code>[data-container]</code> element.
-      </p>
-    </div>
+<hr>
 
-    <div data-container="padding:sm" style="--container-size: 76.6875rem" data-stack="gap:sm">
-      <h3>Code</h3>
-      <pre>
+
+<section>
+  <div data-container="padding:sm" style="--container-size: 76.6875rem" data-stack="gap:sm" class="container">
+    <h3>Demo</h3>
+    <p>Custom widths can be declared by overriding the <code>--container-size</code> property of the
+      <code>[data-container]</code> element.
+    </p>
+  </div>
+
+  <div data-container="padding:sm" style="--container-size: 76.6875rem" data-stack="gap:sm">
+    <h3>Code</h3>
+    <pre>
       &lt;div data-container style="--container-size: 76.6875rem"&gt;
         &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, quod.&lt;/p&gt;
       &lt;/div&gt;
       </pre>
-    </div>
-  </section>
+  </div>
+</section>
 
-
-
-</body>
-
-</html>
+{% include "foot.html" %}

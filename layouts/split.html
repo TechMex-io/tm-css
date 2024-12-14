@@ -1,78 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
+{% include "head.html" %}
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="description" content="CSS Stuffs">
-  <title>Layouts</title>
-
-  <link rel="stylesheet" href="../dist/styles.min.css">
-  <style>
-    [data-cluster] {
-      background-color: hsl(0 0% 100% / .35);
-      min-block-size: 4rem;
-    }
-
-    section {
-      /* background-color: lightblue;
-      padding: 2rem; */
-      margin-block-start: 3rem;
-
-      >*+* {
-        margin-block-start: 2rem;
-      }
-    }
-  </style>
-  <script type="module">
-    import { createSignal, createHandler } from '../scripts/vivo.js'
-
-    const [text, setText] = createSignal('text', 'justify:center align:center gap:md')
-    const splitEl = document.querySelector('[data-split]');
-    console.log(splitEl)
-    const spanEl = document.querySelector('span');
-    createHandler('updateText', e => {
-      setText(e.target.value.trim());
-      splitEl.setAttribute('data-split', text());
-      spanEl.textContent = text();
-    })
-  </script>
-</head>
-
-<body data-container="width:sm">
-
-  <header>
-    <h1>Layouts - Split</h1>
-    <div data-cluster="gap:sm" style="margin-block-start: 1rem;">
-      <p><a href="../index.html">Elements</a></p>
-      <p><a href="./container.html">Container</a></p>
-      <p><a href="./stack.html">Stack</a></p>
-      <p><a href="./cluster.html">Cluster</a></p>
-      <p><a href="./split.html">Split</a></p>
-      <p><a href="./switcher.html">Switcher</a></p>
-      <p><a href="./cover.html">Cover</a></p>
-      <p><a href="./center.html">Center</a></p>
-      <p><a href="./masonry.html">Masonry</a></p>
-
-    </div>
-  </header>
+<header>
+  <h1>Layouts - Split</h1>
+  {% include "nav.html" %}
+</header>
 
 
-  <section>
-    <h3>Demo:</h3>
-    <form data-split="3/4 gap:sm collapse:sm align:end">
-      <label for="email" data-stack="gap:sm">
-        Email Adress
-        <input type="text" name="email" id="email" />
-      </label>
-      <button>Subscribe</button>
-    </form>
+<section>
+  <h3>Demo:</h3>
+  <form class="split-demo" data-split="3/4 gap:sm collapse:sm align:end">
+    <label for="email" data-stack="gap:sm">
+      Email Adress
+      <input type="text" name="email" id="email" />
+    </label>
+    <button>Subscribe</button>
+  </form>
 
-    <hr>
+  <hr>
 
-    <h3>Code:</h3>
-    <pre>
+  <label for="text" data-stack="gap:sm">
+    <h3>Edit:</h3>
+    <input type="text" id="text" data-vivo="input:updateText" value="3/4 gap:sm collapse:sm align:end" />
+  </label>
+
+  <hr>
+
+
+  <h3>Code:</h3>
+  <pre>
       &#x3C;form data-split=&#x22;<span>3/4 gap:sm collapse:sm align:end</span>&#x22;&#x3E;
         &#x3C;label for=&#x22;email&#x22; data-stack=&#x22;gap:sm&#x22;&#x3E;
           Email Adress
@@ -82,24 +37,19 @@
       &#x3C;/form&#x3E;
     </pre>
 
-    <hr>
+  <hr>
 
-    <label for="text" data-stack="gap:sm">
-      <h3>Edit:</h3>
-      <input type="text" id="text" data-vivo="input:updateText" value="3/4 gap:sm collapse:sm align:end" />
-    </label>
 
-    <hr>
-
-    <h3>API:</h3>
-    <pre>
+  <h3>API:</h3>
+  <pre>
 [1/4, 1/3, 3/4, 2/3]
 collapse:[sm, md, lg]
 align:[start, end, between, around]
 gap:[sm, md, lg]
   </pre>
 
-  </section>
-</body>
+</section>
 
-</html>
+
+
+{% include "foot.html" %}

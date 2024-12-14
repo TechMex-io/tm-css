@@ -1,68 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
+{% include "head.html" %}
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="description" content="CSS Stuffs">
-  <title>Layouts</title>
-
-  <link rel="stylesheet" href="../dist/styles.min.css">
-  <style>
-    .demo {
-      background-color: hsl(205deg 100% 95% / .85);
-      min-block-size: 4rem;
-    }
-
-    section {
-      /* background-color: lightblue;
-      padding: 2rem; */
-      margin-block-start: 3rem;
-
-      >*+* {
-        margin-block-start: 2rem;
-      }
-    }
-  </style>
-  <script type="module">
-    import { createSignal, createHandler } from '../scripts/vivo.js'
-
-    const [text, setText] = createSignal('text', 'justify:center align:center gap:md')
-    const clusterEl = document.querySelector('.demo');
-    const spanEl = document.querySelector('.clusterspan');
-    createHandler('updateText', e => {
-      setText(e.target.value.trim());
-      clusterEl.setAttribute('data-cluster', text());
-      spanEl.textContent = text();
-    })
-
-  </script>
-</head>
-
-<body data-container="width:sm">
+<body data-container="width:sm padding:sm">
 
   <header>
     <h1>Layouts - Cluster</h1>
-    <div data-cluster="gap:sm" style="margin-block-start: 1rem;">
-      <p><a href="../index.html">Elements</a></p>
-      <p><a href="./container.html">Container</a></p>
-      <p><a href="./stack.html">Stack</a></p>
-      <p><a href="./cluster.html">Cluster</a></p>
-      <p><a href="./split.html">Split</a></p>
-      <p><a href="./switcher.html">Switcher</a></p>
-      <p><a href="./cover.html">Cover</a></p>
-      <p><a href="./center.html">Center</a></p>
-      <p><a href="./masonry.html">Masonry</a></p>
-
-    </div>
+    {% include "nav.html" %}
   </header>
 
 
 
   <section>
     <h3>Demo:</h3>
-    <div data-cluster="justify:center align:center gap:md" class="demo">
+    <div data-cluster="justify:center align:center gap:md" class="cluster-demo">
       <p><a href="#">Home</a></p>
       <p><a href="#">About</a></p>
       <p><a href="#">Contact</a></p>
@@ -81,7 +30,7 @@
 
     <h3>Code:</h3>
     <pre>
-    &#x3C;div data-cluster=&#x22;<span class="clusterspan">justify:center align:center gap:md</span>&#x22;&#x3E;
+    &#x3C;div data-cluster=&#x22;<span class="demospan">justify:center align:center gap:md</span>&#x22;&#x3E;
       &#x3C;p&#x3E;&#x3C;a href=&#x22;#&#x22;&#x3E;Home&#x3C;/a&#x3E;&#x3C;/p&#x3E;
       &#x3C;p&#x3E;&#x3C;a href=&#x22;#&#x22;&#x3E;About&#x3C;/a&#x3E;&#x3C;/p&#x3E;
       &#x3C;p&#x3E;&#x3C;a href=&#x22;#&#x22;&#x3E;Contact&#x3C;/a&#x3E;&#x3C;/p&#x3E;
@@ -95,9 +44,6 @@
     <small>
       <pre>justify:[start, end, between, around, center]<br>align:[start, end, center]<br>gap:[sm, md, lg]</pre>
     </small>
-
   </section>
 
-</body>
-
-</html>
+  {% include "foot.html" %}

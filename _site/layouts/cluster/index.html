@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="CSS Stuffs">
+  <title>Elements</title>
+  <link rel="stylesheet" href="/dist/styles.min.css">
+  <link rel="stylesheet" href="/demo/docs.css">
+  <script type="module" src="/scripts/index.js"></script>
+</head>
+
+<body data-container="width:sm padding:sm">
+
+
+<body data-container="width:sm padding:sm">
+
+  <header>
+    <h1>Layouts - Cluster</h1>
+    <nav data-cluster="gap:md">
+  <a href="/">Home</a>
+  <a href="/elements">Elements</a>
+  <a href="/layouts/container">Container</a>
+  <a href="/layouts/stack">Stack</a>
+  <a href="/layouts/cluster">Cluster</a>
+  <a href="/layouts/split">Split</a>
+  <a href="/layouts/switcher">Switcher</a>
+  <a href="/layouts/cover">Cover</a>
+  <a href="/layouts/center">Center</a>
+  <!--
+  <a href="/layouts/grid.html">Grid</a>
+  <a href="/layouts/row.html">Row</a>
+  -->
+
+</nav>
+
+  </header>
+
+
+
+  <section>
+    <h3>Demo:</h3>
+    <div data-cluster="justify:center align:center gap:md" class="cluster-demo">
+      <p><a href="#">Home</a></p>
+      <p><a href="#">About</a></p>
+      <p><a href="#">Contact</a></p>
+      <p><a href="#">Blog</a></p>
+    </div>
+
+    <hr>
+
+
+    <label for="text" data-stack="gap:sm">
+      <h3>Edit:</h3>
+      <input type="text" id="text" data-vivo="input:updateText" value="justify:center align:center gap:md" />
+    </label>
+
+    <hr>
+
+    <h3>Code:</h3>
+    <pre>
+    &#x3C;div data-cluster=&#x22;<span class="demospan">justify:center align:center gap:md</span>&#x22;&#x3E;
+      &#x3C;p&#x3E;&#x3C;a href=&#x22;#&#x22;&#x3E;Home&#x3C;/a&#x3E;&#x3C;/p&#x3E;
+      &#x3C;p&#x3E;&#x3C;a href=&#x22;#&#x22;&#x3E;About&#x3C;/a&#x3E;&#x3C;/p&#x3E;
+      &#x3C;p&#x3E;&#x3C;a href=&#x22;#&#x22;&#x3E;Contact&#x3C;/a&#x3E;&#x3C;/p&#x3E;
+      &#x3C;p&#x3E;&#x3C;a href=&#x22;#&#x22;&#x3E;Blog&#x3C;/a&#x3E;&#x3C;/p&#x3E;
+    &#x3C;/div&#x3E;
+      </pre>
+
+    <hr>
+
+    <h3>API:</h3>
+    <small>
+      <pre>justify:[start, end, between, around, center]<br>align:[start, end, center]<br>gap:[sm, md, lg]</pre>
+    </small>
+  </section>
+
+  </body>
+
+</html>
+

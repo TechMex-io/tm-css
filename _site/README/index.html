@@ -1,0 +1,51 @@
+<h1>Tech-Mex CSS</h1>
+<p>A simple CSS framework for Tech-Mex projects</p>
+<h2>Credits</h2>
+<ul>
+<li>Built on top of <a href="https://newcss.net/">NewCSS</a>
+This is the basis of this setup. It is cloned here as <code>elements.css</code> with a few modifications.</li>
+<li>Layouts largeley stolen from <a href="https://every-layout.dev/">Every Layout</a></li>
+<li><a href="https://github.com/shoelace-style/shoelace">Shoelace</a> is added as a dev dependency but needs to be included in your project. See the <a href="https://shoelace.style/">Shoelace documentation</a> for more information.</li>
+</ul>
+<h2>About</h2>
+<h3>Install</h3>
+<p>In your Processwire site,</p>
+<ul>
+<li><code>cd</code> into <code>/site/templates</code></li>
+<li><code>rm -rf styles scripts</code></li>
+<li><code>git clone git@github.com:TechMex-io/tm-css.git </code></li>
+<li><code>mv tm-css/styles ./</code></li>
+<li><code>mv tm-css/scripts ./</code></li>
+<li><code>mv tm-css/package.json ./</code></li>
+<li><code>pnpm i</code></li>
+<li><code>rm -rf tm-css/</code></li>
+<li>update your template files with the paths to <code>dist/styles.min.js</code> and <code>dist/bundle.min.js</code></li>
+</ul>
+<h3>CSS</h3>
+<p><code>index.css</code> is the entry point for your css.
+<code>@layers</code> are set up in the followng order:</p>
+<pre><code>@layer settings, reset, vendor, elements, objects, components, app, utils;
+</code></pre>
+<p>when starting a new site or app, you’ll likely leave <code>reset.css</code> and <code>objects.css</code> alone.
+start with <code>settings.css</code>
+this is where you set up your custom css properties. there are some properties already set up but is by no means complete. this is just a starting point or example. you should create your own naming conventions and expand this as needed.</p>
+<p><code>reset.css</code> is where you add any css resets for your site. a default reset is included that is based on Josh Comeau’s <a href="https://www.joshwcomeau.com/css/custom-css-reset/">CSS Reset</a>.</p>
+<p><code>vendor.css</code> is where you add any vendor css for your site. it is preferable that you import vendor css in the appropriate layer. the build script will import vendor css in the appropriate layer.</p>
+<p><code>elements.css</code> is where you add any default styling to bare elements for your site. this is where you can set up your typography and general site/app defaults for most HTML elements. the default element styles included are based on <a href="https://newcss.net/">NewCSS</a>.</p>
+<p><code>objects.css</code> is where you add any layouts for your site. many objects are included.</p>
+<p><code>components.css</code> is where you add any component css such as cards, navs, etc.</p>
+<p><code>app.css</code> is where you add any custom styling for your site.</p>
+<p><code>utils.css</code> is where you add any utility classes for your site. these are the highest specificity and should be used sparingly. a few utility classes are included but this is for you to update as needed.</p>
+<h3>JS</h3>
+<h2>Todo</h2>
+<ul>
+<li>[ ]  Finish basic documentation</li>
+<li>[ ] Add detailed documentation
+<ul>
+<li>[ ] for layouts</li>
+<li>[ ] for use in processwire projects</li>
+</ul>
+</li>
+<li>[x] Update demos UI</li>
+<li>[ ] PHP script to delete unnecessary files for a new processwire site</li>
+</ul>

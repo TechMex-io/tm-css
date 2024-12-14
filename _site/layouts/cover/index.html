@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="CSS Stuffs">
+  <title>Elements</title>
+  <link rel="stylesheet" href="/dist/styles.min.css">
+  <link rel="stylesheet" href="/demo/docs.css">
+  <script type="module" src="/scripts/index.js"></script>
+</head>
+
+<body data-container="width:sm padding:sm">
+
+
+<header>
+  <h1>Layouts - Cover</h1>
+  <nav data-cluster="gap:md">
+  <a href="/">Home</a>
+  <a href="/elements">Elements</a>
+  <a href="/layouts/container">Container</a>
+  <a href="/layouts/stack">Stack</a>
+  <a href="/layouts/cluster">Cluster</a>
+  <a href="/layouts/split">Split</a>
+  <a href="/layouts/switcher">Switcher</a>
+  <a href="/layouts/cover">Cover</a>
+  <a href="/layouts/center">Center</a>
+  <!--
+  <a href="/layouts/grid.html">Grid</a>
+  <a href="/layouts/row.html">Row</a>
+  -->
+
+</nav>
+
+</header>
+
+
+
+<section>
+  <h3>Demo:</h3>
+  <header class="site-header bordered cover-demo" data-cover="padding:sm height:100">
+    <nav class="site-nav" data-cluster="gap:sm align:center justify:between">
+      <span class="logo"><a href="/">DH</a></span>
+
+      <section data-cluster="align:center gap:md">
+        <ul data-cluster="align:center gap:md">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+
+        <p><a tel="123-456-7890">123-456-7890</a></p>
+
+        <button>Get a quote</button>
+      </section>
+    </nav>
+
+    <section data-cover-main data-center="center:text" data-stack="gap:sm">
+      <h1>Dogwood Homes</h1>
+      <h2>Contracting &amp; Design Studio</h2>
+      <p>Little Rock, AR</p>
+    </section>
+
+  </header>
+
+  <hr>
+
+  <label for="text" data-stack="gap:sm">
+    <h3>Edit:</h3>
+    <input type="text" id="text" data-vivo="input:updateText" value="padding:sm height:100" />
+  </label>
+
+  <hr>
+
+  <h3>Code:</h3>
+  <pre>
+  &#x3C;header class=&#x22;site-header&#x22; data-cover=&#x22;<span class="demospan">height:100</span>&#x22;&#x3E;
+  &#x3C;nav class=&#x22;site-nav&#x22; data-cluster=&#x22;gap:sm align:center justify:between&#x22;&#x3E;
+    &#x3C;span class=&#x22;logo&#x22;&#x3E;&#x3C;a href=&#x22;/&#x22;&#x3E;DH&#x3C;/a&#x3E;&#x3C;/span&#x3E;
+
+    &#x3C;section data-cluster=&#x22;align:center gap:md&#x22;&#x3E;
+      &#x3C;ul data-cluster=&#x22;align:center gap:md&#x22;&#x3E;
+        &#x3C;li&#x3E;&#x3C;a href=&#x22;#&#x22;&#x3E;Home&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+        &#x3C;li&#x3E;&#x3C;a href=&#x22;#&#x22;&#x3E;About&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+        &#x3C;li&#x3E;&#x3C;a href=&#x22;#&#x22;&#x3E;Contact&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+        &#x3C;li&#x3E;&#x3C;a href=&#x22;#&#x22;&#x3E;Blog&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+      &#x3C;/ul&#x3E;
+
+      &#x3C;p&#x3E;&#x3C;a tel=&#x22;123-456-7890&#x22;&#x3E;123-456-7890&#x3C;/a&#x3E;&#x3C;/p&#x3E;
+
+      &#x3C;button&#x3E;Get a quote&#x3C;/button&#x3E;
+    &#x3C;/section&#x3E;
+  &#x3C;/nav&#x3E;
+
+  &#x3C;section data-cover-main data-center=&#x22;center:text&#x22; data-stack=&#x22;gap:sm&#x22;&#x3E;
+    &#x3C;h1&#x3E;Dogwood Homes&#x3C;/h1&#x3E;
+    &#x3C;h2&#x3E;Contracting &#x26;amp; Design Studio&#x3C;/h2&#x3E;
+    &#x3C;p&#x3E;Little Rock, AR&#x3C;/p&#x3E;
+  &#x3C;/section&#x3E;
+
+&#x3C;/header&#x3E;
+</pre>
+
+
+
+  <hr>
+
+  <h3>API:</h3>
+  <small data-stack>
+    <pre>height:[25, 50, 75, 100] (25vh, 50vh, 75vh, 100vh)<br>padding:[sm, md, lg]</pre>
+  </small>
+
+  <small>
+    note: to center content within the cover element, you must add a container with a <code>data-cover-main</code>
+    attribute. to center elements and/or text within the container, add a <code>data-center</code> attribute with it's
+    options.
+  </small>
+
+
+</section>
+
+</body>
+
+</html>
+
