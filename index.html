@@ -10,12 +10,33 @@
   }
 </style>
 
+<label for="disable-rings" class="disable-rings-label" data-stack>
+  <small>Disable rings</small>
+  <input type="checkbox" name="disable-rings" id="disable-rings">
+</label>
+<div class="ring-container">
+  <div class="ring"></div>
+  <div class="ring"></div>
+  <div class="ring"></div>
+  <div class="ring"></div>
+</div>
+<div class="ring-container">
+  <div class="ring"></div>
+  <div class="ring"></div>
+  <div class="ring"></div>
+  <div class="ring"></div>
+</div>
+
+
+
 
 <div data-cover="height:100 center:text">
   <div data-cover-main data-center="center:text">
     <h1>Elemental</h1>
     <p>CSS Layouts by <a href="https://tech-mex.io" class="tm-link">Tech-Mex</a></p>
     {% include "nav.html" with {justify: 'center'} %}
+
+
 
     <figure>
       <img src="./img/elemental.svg" alt="">

@@ -1,87 +1,5 @@
 {% include "head.html" %}
-<style>
-  body:has(#disable-rings:checked) .ring {
-    animation: none;
-  }
-
-  .ring-container {
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    left: -45%;
-    top: -45%;
-    z-index: -1;
-  }
-
-  .ring {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border: 1px solid rgb(23 65 63 / 50%);
-    border-radius: 50%;
-    animation: pulse 4s linear infinite;
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .disable-rings-label {
-      /* display: none; */
-    }
-
-    .ring {
-      /* animation: none; */
-    }
-  }
-
-  .ring:nth-child(2) {
-    animation-delay: -1s;
-  }
-
-  .ring:nth-child(3) {
-    animation-delay: -2s;
-  }
-
-  .ring:nth-child(4) {
-    animation-delay: -3s;
-  }
-
-  @keyframes pulse {
-    0% {
-      width: 0;
-      height: 0;
-      opacity: 1;
-    }
-
-    100% {
-      width: 500px;
-      height: 500px;
-      opacity: 0;
-    }
-  }
-
-  .disable-rings-label {
-    cursor: pointer;
-    position: fixed;
-    top: 2rem;
-    right: 2rem;
-    background-color: white;
-    padding: .85rem;
-  }
-</style>
-
-
-<label for="disable-rings" class="disable-rings-label" data-stack>
-  <small>Disable rings</small>
-  <input type="checkbox" name="disable-rings" id="disable-rings">
-</label>
-<div class="ring-container">
-  <div class="ring"></div>
-  <div class="ring"></div>
-  <div class="ring"></div>
-  <div class="ring"></div>
-</div>
-
-<header>
+<header id="top">
   <h1>Elements</h1>
 
   {% include "nav.html" %}
@@ -269,7 +187,7 @@ goto first step (or shut off burner when done)</pre>
         <label for="input__text5">Disabled</label>
         <input id="input__text5" placeholder="Text Input" type="text" disabled autocomplete="username">
       </p>
-      <p><a href="#top">[Top]</a></p>
+      <p><a href="elements/#top">[Top]</a></p>
 
 
 
@@ -305,14 +223,14 @@ goto first step (or shut off burner when done)</pre>
           <label for="radio3"><input id="radio3" name="radio" type="radio"> Choice C</label>
         </div>
       </div>
-      <p><a href="#top">[Top]</a></p>
+      <p><a href="elements/#top">[Top]</a></p>
 
       <label for="textarea" data-stack="gap:sm">
         <h3>Textarea</h3>
         <textarea cols="48" id="textarea" placeholder="Enter your message here" rows="8"></textarea>
       </label>
       </p>
-      <p><a href="#top">[Top]</a></p>
+      <p><a href="elements/#top">[Top]</a></p>
       <h3>Action buttons</h3>
       <p data-cluster="gap:sm">
         <input type="submit" value="input type=submit"> <input type="button" value="input type=button"> <input
@@ -323,7 +241,7 @@ goto first step (or shut off burner when done)</pre>
           type=button&gt;</button> <button type="reset">&lt;button type=reset&gt;</button> <button disabled=""
           type="button">&lt;button disabled&gt;</button>
       </p>
-      <p><a href="#top">[Top]</a></p>
+      <p><a href="elements/#top">[Top]</a></p>
   </form>
   <div>
     <hr>

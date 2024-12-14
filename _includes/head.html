@@ -9,8 +9,9 @@
   <title>Elements</title>
   <link rel="stylesheet" href="{{ '/elemental/dist/styles.min.css' | url }}">
   <link rel="stylesheet" href="{{ '/demo/docs.css' | url }}">
-  <script type="module" src="{{ '/scripts/index.js' | url }}"></script>
+  <script type="module" src="{{ '/scripts/app.js' | url }}"></script>
   <base href="{{ '/tm-css' | url }}" />
 </head>
 
-<body data-container="width:sm padding:sm">
+<body data-container="width:sm padding:sm" class="page-{{ page.fileSlug }}">
+  <img src="./img/elemental.svg" alt="" class="elemental-oranament">
