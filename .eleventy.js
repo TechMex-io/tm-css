@@ -5,6 +5,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("scripts");
 
   return {
+    pathPrefix: "/tm-css/",
     passthroughFileCopy: true
   };
 };
