@@ -4,14 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build:css": "esbuild --bundle ./styles/index.css --loader:.ttf=file --outfile=./dist/styles.min.css --minify --sourcemap",
-    "watch:css": "esbuild --bundle ./styles/index.css --loader:.ttf=file --outfile=./dist/styles.min.css --watch",
-    "build:js": "esbuild ./scripts/main.js --outfile=./dist/bundle.min.js --bundle --minify --sourcemap --tree-shaking=true",
-    "watch:js": "esbuild ./scripts/main.js --outfile=./dist/bundle.min.js --bundle --watch",
-    "build": "npm-run-all -p build:js build:css",
-    "watch": "npm-run-all -p watch:js watch:css",
     "el": "npx eleventy",
-    "el:serve": "npx eleventy --serve"
+    "el:serve": "npx eleventy --serve",
+    "update": "./update-repos.sh"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",
