@@ -74,9 +74,19 @@
     --layout-masonry-gap-sm: clamp(0.75rem, 2.5vw + .5rem, 1.75vw);
     --layout-masonry-gap-md: clamp(1rem, 3vw, 2vw);
     --layout-masonry-gap-lg: clamp(1.5rem, 4vw, 3vw);
-    --layout-collapse-sm: 25rem;
-    --layout-collapse-md: 40rem;
-    --layout-collapse-lg: 60rem;
+    --layout-grid-min-width: clamp(18.75rem, 25vw, 37.5rem);
+    --layout-grid-gap-sm: clamp(0.75rem, 2.5vw, 1.5rem);
+    --layout-grid-gap-md: clamp(1rem, 3vw, 2rem);
+    --layout-grid-gap-lg: clamp(1.5rem, 4vw, 3rem);
+    --layout-flanked-gap-sm: clamp(0.75rem, 2.5vw, 1.5rem);
+    --layout-flanked-gap-md: clamp(1rem, 3vw, 2rem);
+    --layout-flanked-gap-lg: clamp(1.5rem, 4vw, 3rem);
+    --layout-flanked-sidebar-width-sm: 10rem;
+    --layout-flanked-sidebar-width-md: 15rem;
+    --layout-flanked-sidebar-width-lg: 20rem;
+    --layout-flanked-collapse-sm: 25rem;
+    --layout-flanked-collapse-md: 40rem;
+    --layout-flanked-collapse-lg: 60rem;
     --layout-split-gap-sm: clamp(1rem, 3vw, 1.5rem);
     --layout-split-gap-md: clamp(1.5rem, 4vw, 2.5rem);
     --layout-split-gap-lg: clamp(2rem, 5vw, 4rem);
@@ -105,7 +115,7 @@
     --color-text-primary-dark: hsl(220 15% 90% / 1);
     --color-text-secondary-dark: hsl(220 10% 80% / 1);
     --color-bg-primary-dark: hsl(222 47% 11% / 1);
-    --color-bg-secondary-dark: hsl(222 45% 14% / 1);
+    --color-bg-secondary-dark: hsl(222deg 36% 21% / 1);
     --color-bg-muted-dark: hsl(222 43% 18% / 1);
     --color-link-primary-dark: hsl(210 85% 60% / 1);
     --color-link-secondary-dark: hsl(210 75% 55% / 1);
@@ -1009,50 +1019,70 @@
 /* styles/object.grid.css */
 @layer objects {
   [data-grid] {
-    --min-item-size: initial;
-    --target-item-size: initial;
-    --max-item-size: initial;
-    --gap: initial;
+    --min-width: var(--layout-grid-min-width);
+    --grid-gap: var(--layout-grid-gap-sm);
     display: grid;
-    grid-template-columns: repeat(var(--grid-placement, auto-fill), minmax(var(--grid-min-item-size, 16rem), 1fr));
-    gap: var(--gap);
-  }
-  [data-grid~="col:2"] {
-    --grid-placement: auto-fit;
-    --min-item-size: 16rem;
-    --target-item-size: 50%;
-    --max-item-size: 30rem;
-    --grid-min-item-size: clamp(var(--min-item-size), var(--target-item-size), var(--max-item-size));
-  }
-  [data-grid~="col:3"] {
-    --grid-placement: auto-fit;
-    --min-item-size: 16rem;
-    --target-item-size: 33%;
-    --max-item-size: 30rem;
-    --grid-min-item-size: clamp(var(--min-item-size), var(--target-item-size), var(--max-item-size));
-  }
-  [data-grid~="col:4"] {
-    --grid-placement: auto-fit;
-    --min-item-size: 16rem;
-    --target-item-size: 25%;
-    --max-item-size: 30rem;
-    --grid-min-item-size: clamp(var(--min-item-size), var(--target-item-size), var(--max-item-size));
-  }
-  [data-grid~="col:5"] {
-    --grid-placement: auto-fit;
-    --min-item-size: 16rem;
-    --target-item-size: 20%;
-    --max-item-size: 30rem;
-    --grid-min-item-size: clamp(var(--min-item-size), var(--target-item-size), var(--max-item-size));
+    grid-gap: var(--grid-gap);
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min-width)), 1fr));
   }
   [data-grid~="gap:1"] {
-    --gap: 1rem;
+    --grid-gap: var(--layout-grid-gap-sm);
   }
   [data-grid~="gap:2"] {
-    --gap: 2rem;
+    --grid-gap: var(--layout-grid-gap-md);
   }
   [data-grid~="gap:3"] {
-    --gap: 3rem;
+    --grid-gap: var(--layout-grid-gap-lg);
+  }
+  [data-grid~=flanked] {
+  }
+  .old {
+    [data-grid] {
+      --min-item-size: initial;
+      --target-item-size: initial;
+      --max-item-size: initial;
+      --gap: initial;
+      display: grid;
+      grid-template-columns: repeat(var(--grid-placement, auto-fill), minmax(var(--grid-min-item-size, 16rem), 1fr));
+      gap: var(--gap);
+    }
+    [data-grid~="col:2"] {
+      --grid-placement: auto-fit;
+      --min-item-size: 16rem;
+      --target-item-size: 50%;
+      --max-item-size: 30rem;
+      --grid-min-item-size: clamp(var(--min-item-size), var(--target-item-size), var(--max-item-size));
+    }
+    [data-grid~="col:3"] {
+      --grid-placement: auto-fit;
+      --min-item-size: 16rem;
+      --target-item-size: 33%;
+      --max-item-size: 30rem;
+      --grid-min-item-size: clamp(var(--min-item-size), var(--target-item-size), var(--max-item-size));
+    }
+    [data-grid~="col:4"] {
+      --grid-placement: auto-fit;
+      --min-item-size: 16rem;
+      --target-item-size: 25%;
+      --max-item-size: 30rem;
+      --grid-min-item-size: clamp(var(--min-item-size), var(--target-item-size), var(--max-item-size));
+    }
+    [data-grid~="col:5"] {
+      --grid-placement: auto-fit;
+      --min-item-size: 16rem;
+      --target-item-size: 20%;
+      --max-item-size: 30rem;
+      --grid-min-item-size: clamp(var(--min-item-size), var(--target-item-size), var(--max-item-size));
+    }
+    [data-grid~="gap:1"] {
+      --gap: 1rem;
+    }
+    [data-grid~="gap:2"] {
+      --gap: 2rem;
+    }
+    [data-grid~="gap:3"] {
+      --gap: 3rem;
+    }
   }
 }
 
@@ -1124,6 +1154,54 @@
   }
 }
 
+/* styles/object.flanked.css */
+@layer objects {
+  * {
+    box-sizing: border-box;
+  }
+  [data-flanked] {
+    --flanked-gap: var(--layout-flanked-gap-sm);
+    --collapse-at: var(--layout-flanked-collapse-sm);
+    --sidebar-width: var(--layout-flanked-sidebar-width-sm);
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--flanked-gap);
+  }
+  [data-flanked] > * {
+    flex-basis: max(calc((var(--collapse-at) - 100%) * 666), var(--sidebar-width));
+  }
+  [data-flanked] > *:nth-child(2) {
+    flex-grow: 1;
+  }
+  [data-flanked~="gap:sm"] {
+    --flanked-gap: var(--layout-flanked-gap-sm);
+  }
+  [data-flanked~="gap:md"] {
+    --flanked-gap: var(--layout-flanked-gap-md);
+  }
+  [data-flanked~="gap:lg"] {
+    --flanked-gap: var(--layout-flanked-gap-lg);
+  }
+  [data-flanked~="collapse:sm"] {
+    --collapse-at: var(--layout-flanked-collapse-sm);
+  }
+  [data-flanked~="collapse:md"] {
+    --collapse-at: var(--layout-flanked-collapse-md);
+  }
+  [data-flanked~="collapse:lg"] {
+    --collapse-at: var(--layout-flanked-collapse-lg);
+  }
+  [data-flanked~="sidebar:sm"] {
+    --sidebar-width: var(--layout-flanked-sidebar-width-sm);
+  }
+  [data-flanked~="sidebar:md"] {
+    --sidebar-width: var(--layout-flanked-sidebar-width-md);
+  }
+  [data-flanked~="sidebar:lg"] {
+    --sidebar-width: var(--layout-flanked-sidebar-width-lg);
+  }
+}
+
 /* styles/objects.css */
 @layer objects;
 
@@ -1192,6 +1270,7 @@
   .debug [data-container],
   .debug [data-masonry],
   .debug [data-media],
+  .debug [data-flanked],
   .debug [data-clamp] {
     background-color: hsl(250deg 50% 50% / 0.2);
     & > * {
