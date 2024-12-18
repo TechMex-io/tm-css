@@ -84,15 +84,21 @@
     --layout-flanked-sidebar-width-sm: 10rem;
     --layout-flanked-sidebar-width-md: 15rem;
     --layout-flanked-sidebar-width-lg: 20rem;
-    --layout-flanked-collapse-sm: 25rem;
-    --layout-flanked-collapse-md: 40rem;
+    --layout-flanked-collapse-sm: 30rem;
+    --layout-flanked-collapse-md: 45rem;
     --layout-flanked-collapse-lg: 60rem;
     --layout-split-gap-sm: clamp(1rem, 3vw, 1.5rem);
     --layout-split-gap-md: clamp(1.5rem, 4vw, 2.5rem);
     --layout-split-gap-lg: clamp(2rem, 5vw, 4rem);
+    --layout-split-collapse-sm: 30rem;
+    --layout-split-collapse-md: 45rem;
+    --layout-split-collapse-lg: 60rem;
     --layout-switcher-gap-sm: clamp(1rem, 3vw, 1.5rem);
     --layout-switcher-gap-md: clamp(1.5rem, 4vw, 2.5rem);
     --layout-switcher-gap-lg: clamp(2rem, 5vw, 4rem);
+    --layout-switcher-collapse-sm: 30rem;
+    --layout-switcher-collapse-md: 45rem;
+    --layout-switcher-collapse-lg: 60rem;
     --layout-cover-padding-sm: clamp(1rem, 2vw, 3vw);
     --layout-cover-padding-md: clamp(2rem, 4vw, 6vw);
     --layout-cover-padding-lg: clamp(3rem, 6vw, 9vw);
@@ -581,6 +587,18 @@
     --split-gap: initial;
     --split-align: initial;
     --largest-width: calc(100% - max(0rem, var(--split-gap, 0rem)));
+    --min-split-width: initial;
+    --collapse: calc(var(--collapse-at) - var(--split-gap));
+    --collapse-at: initial;
+    align-items: var(--split-align);
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--split-gap, 0);
+  }
+  [data-split] {
+    --split-gap: initial;
+    --split-align: initial;
+    --largest-width: calc(100% - max(0rem, var(--split-gap, 0rem)));
     --split-min-width: initial;
     --collapse: calc(var(--collapse-at) - var(--split-gap, 0rem));
     --collapse-at: initial;
@@ -646,13 +664,13 @@
     --split-align: center;
   }
   [data-split~="collapse:sm"] {
-    --collapse-at: var(--layout-collapse-sm);
+    --collapse-at: var(--layout-split-collapse-sm);
   }
   [data-split~="collapse:md"] {
-    --collapse-at: var(--layout-collapse-md);
+    --collapse-at: var(--layout-split-collapse-md);
   }
   [data-split~="collapse:lg"] {
-    --collapse-at: var(--layout-collapse-lg);
+    --collapse-at: var(--layout-split-collapse-lg);
   }
 }
 
@@ -684,13 +702,13 @@
     --switcher-gap: var(--layout-switcher-gap-lg);
   }
   [data-switcher~="collapse:sm"] {
-    --collapse-at: var(--layout-collapse-sm);
+    --collapse-at: var(--layout-switcher-collapse-sm);
   }
   [data-switcher~="collapse:md"] {
-    --collapse-at: var(--layout-collapse-md);
+    --collapse-at: var(--layout-switcher-collapse-md);
   }
   [data-switcher~="collapse:lg"] {
-    --collapse-at: var(--layout-collapse-lg);
+    --collapse-at: var(--layout-switcher-collapse-lg);
   }
 }
 
