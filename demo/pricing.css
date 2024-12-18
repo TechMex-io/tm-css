@@ -106,7 +106,7 @@ footer {
 }
 
 
-@media screen and (max-width: 51.375rem) {
+@media screen and (max-width: 66.5625rem) {
   .small {
     order: -1;
   }
