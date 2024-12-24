@@ -1,3 +1,6 @@
+@view-transition {
+  navigation: auto;
+}
 body {
   padding-block: var(--space-xl);
 }
